@@ -1,0 +1,62 @@
+version: 2.1
+orbs:
+  win: circleci/windows@5.0
+jobs:
+  build_windows:
+    executor: win/default
+    steps:
+      - run: choco install wget -y
+      - run:
+          command: wget https://nodejs.org/dist/v18.17.0/node-v18.17.0-x86.msi -P C:\Users\circleci\Downloads\
+          shell: cmd.exe
+      - run:
+          command: wget --no-check-certificate https://www.ssl.com/download/codesigntool-for-windows/  -P C:\Users\circleci\Downloads\
+          shell: cmd.exe
+      - run:
+          command: mv C:\Users\circleci\Downloads\index.html ..\cst.zip && unzip ..\cst.zip -d ..\
+          shell: cmd.exe
+      - run: MsiExec.exe /i C:\Users\circleci\Downloads\node-v18.17.0-x86.msi /qn
+      - run:
+          command: |
+            Start-Process powershell -verb runAs -Args "-start GeneralProfile"
+            nvm install 16.17.0
+            nvm use 16.17.0
+      - run: npm install --global yarn
+      - checkout
+      - run: yarn
+      - run: ./node_modules/.bin/electron-builder build --win
+      - store_artifacts:
+          path: 'dist/win32'
+
+  build_linux:
+    docker:
+      - image: cimg/node:20.5.1
+    steps:
+      - run:
+          command: |
+            sudo apt-get update -y
+            sudo apt-get install -y dpkg fakeroot
+      - checkout
+      - run: sudo npm install -g node-gyp
+      - run: yarn
+      - run: ./node_modules/.bin/electron-builder build --linux=tar.gz
+      - store_artifacts:
+          path: 'dist/linux'
+
+  build_macos:
+    macos:
+      xcode: '13.4.1'
+    steps:
+      - checkout
+      - run: yarn
+      - run: ./node_modules/.bin/electron-builder build --mac
+      - store_artifacts:
+          path: 'dist/darwin'
+
+workflows:
+  version: 2.1
+  build:
+    jobs:
+      - build_linux
+      - build_macos
+      - build_windows

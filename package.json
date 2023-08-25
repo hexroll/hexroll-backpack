@@ -1,0 +1,48 @@
+{
+  "name": "hexroll-backpack",
+  "version": "0.9.0",
+  "description": "Hexroll 2E Offline Viewer",
+  "author": "Ithai Levi <ithai@pendicepaper.com>",
+  "email": "ithai@pendicepaper.com",
+  "main": "src/index.js",
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "dmg-builder": "^24.6.3",
+    "electron": "25.4.0",
+    "electron-builder": "^24.6.3",
+    "electron-notarize": "^1.2.2"
+  },
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w better-sqlite3",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "com.hexroll.app",
+    "productName": "HexrollBackpack",
+    "directories": {
+      "output": "dist/${platform}"
+    },
+    "win": {
+      "signingHashAlgorithms": [
+        "sha256"
+      ],
+      "sign": "./sign.js",
+      "icon": "./assets/icon.ico"
+    },
+    "mac": {
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "icon": "./assets/icon.icns"
+    },
+    "linux": {
+      "icon": "./assets/icon.icns"
+    },
+    "afterSign": "notarize.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "8.4.0"
+  }
+}
