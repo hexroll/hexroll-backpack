@@ -496,7 +496,7 @@ svg#canvas {
 .modal {
   display: block;
   position: fixed;
-  z-index: 4;
+  z-index: 2000;
   left: 0;
   top: 0;
   width: 100%;
@@ -794,6 +794,29 @@ svg#canvas {
   opacity: 0;
 }
 
+#patreon-button {
+  transition: all 0.4s linear;
+  position: fixed;
+  bottom: 6.6em;
+  z-index: 100;
+  font-size: 1.5em;
+}
+
+#patreon-button i{
+  font-size: 0.6em;
+  margin-left: 0.4em;
+}
+
+#patreon-button.visible {
+  left: 2em;
+  opacity: 1;
+}
+
+#patreon-button.hidden {
+  left: -2em;
+  opacity: 0;
+}
+
 #download-button {
   transition: all 0.4s linear;
   position: fixed;
@@ -818,6 +841,7 @@ svg#canvas {
   bottom: 3.5em;
   z-index: 100;
   font-size: 1.5em;
+  margin-left: -0.075em;
 }
 
 #toggles-menu.visible {
@@ -1237,6 +1261,37 @@ polygon.borderline {
   stroke-width: 1;
   animation: fadeBorder 1s ease-in;
   fill: none;
+}
+
+.marker-circle-hover {
+}
+
+.marker-circle {
+  cursor: pointer;
+}
+
+.marker-label {
+  font-family:
+    'Crimson Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-weight: bolder;
+  fill: #bbb;
+  paint-order: stroke;
+  pointer-events: none;
+  stroke: #333;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  visibility: hidden;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+
+.marker-label-hover {
+  visibility: visible;
+  opacity: 1;
 }
 
 .region-label {
