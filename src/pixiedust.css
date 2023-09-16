@@ -802,7 +802,7 @@ svg#canvas {
   font-size: 1.5em;
 }
 
-#patreon-button i{
+#patreon-button i {
   font-size: 0.6em;
   margin-left: 0.4em;
 }
@@ -1231,11 +1231,16 @@ polygon.focused-hex {
   fill: none;
 }
 
+polygon.underwear {
+  fill: #667722;
+}
+
 polygon.continent {
   color: #ff0000;
   stroke: #ff0000;
   stroke-width: 2;
   fill: #667722;
+  fill: #8c8e36;
 }
 
 @keyframes fadeBorder {
@@ -1261,9 +1266,6 @@ polygon.borderline {
   stroke-width: 1;
   animation: fadeBorder 1s ease-in;
   fill: none;
-}
-
-.marker-circle-hover {
 }
 
 .marker-circle {
