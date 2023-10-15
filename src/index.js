@@ -93,6 +93,13 @@ ipcMain.handle('get-dungeon', async (event, uuid) => {
   });
 });
 
+ipcMain.handle('get-hazards', async (event, uuid) => {
+  return new Promise(async (resolve) => {
+    const row = app.stmt.get(uuid + '_hazards');
+    resolve(row ? row.value : '{"hazards": []}');
+  });
+});
+
 ipcMain.handle('search', async (event, term) => {
   return new Promise(async (resolve) => {
     const rows = app.stmt2.all('%' + term + '%');

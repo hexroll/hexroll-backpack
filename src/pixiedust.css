@@ -911,6 +911,37 @@ svg#canvas {
 }
 
 /* -----------------------------------------------------------------------*/
+/* INFO BAR                                                               */
+
+#info-bar {
+  font-size: 0.5em;
+  z-index: 999909;
+  position: fixed;
+  bottom: 6px;
+  right: 10px;
+  font-family: ARIAL;
+}
+
+#info-bar .info-bar-text {
+  color: #000000;
+  opacity: 0.5;
+}
+
+#info-bar a.ephemeral-link {
+  opacity: 0.5;
+  color: #222;
+  font-weight: bold;
+  background: #ff7700;
+  padding: 4px 8px;
+  margin-left: 3px;
+  border-radius: 3px;
+}
+
+#info-bar a.ephemeral-link:hover {
+  opacity: 1;
+}
+
+/* -----------------------------------------------------------------------*/
 /* ENTITY DISPLAY                                                         */
 
 #reroll {
@@ -1272,13 +1303,6 @@ fieldset {
 }
 
 /* HEXMAP SVG ELEMENTS */
-
-polygon {
-  stroke-alignment: inside;
-  stroke: #333;
-  stroke-width: 0.3;
-}
-
 polygon.focused-hex {
   stroke: #fff;
   stroke-width: 1;

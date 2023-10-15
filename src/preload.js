@@ -50,6 +50,14 @@ contextBridge.exposeInMainWorld('api', {
       console.log(error);
     }
   },
+  hazards: async (uuid) => {
+    try {
+      const res = await ipcRenderer.invoke('get-hazards', uuid);
+      return res;
+    } catch (error) {
+      console.log(error);
+    }
+  },
   search: async (term) => {
     try {
       const res = await ipcRenderer.invoke('search', term);
