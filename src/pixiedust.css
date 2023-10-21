@@ -737,6 +737,16 @@ svg#canvas {
 /* -----------------------------------------------------------------------*/
 /* MAP TOOLS DRAWER                                                       */
 
+#map-toolbox a {
+  color: #ddd;
+  text-shadow: 2px 2px 5px #111;
+}
+
+#map-toolbox a:hover {
+  color: #df286d;
+  text-shadow: none;
+}
+
 #drawer-append {
   transform-box: view-box;
   transform-origin: center;
@@ -893,7 +903,7 @@ svg#canvas {
 #toggle-labels {
   transform-box: view-box;
   transform-origin: center;
-  transition: all 0.4s linear;
+  transition: all 0.1s linear;
   display: inline-block;
 }
 
@@ -1093,10 +1103,6 @@ div.small-index {
 }
 
 #entity-container.but_full_width {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
   margin-left: 0;
   margin-right: 0;
 }
@@ -1527,4 +1533,27 @@ svg#canvs a.test:hover {
     2px 1px 4px rgba(68, 68, 68, 0.25),
     -2px 1px 4px rgba(68, 68, 68, 0.25),
     0 9px 16px rgba(68, 68, 68, 0.1);
+}
+
+.hp-mark {
+  font-size: 75%;
+}
+
+.hp-mark-checked {
+  position: relative;
+}
+
+.hp-mark-checked::after {
+  content: '✗';
+  line-height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 75%;
+  transform: translateY(-85%) translateX(-25%);
+  color: #660000;
+  text-align: center;
+  opacity: 0.75;
+  font-size: 150%;
 }
