@@ -204,9 +204,12 @@
  </g>
  <g id="low-tundra-town">
   <path d="m-5.18-2.5-1.35 2 2.5 2.75 1.1-0.695 2.3 1.54 2.22-1.11 2.12-0.745 3.27 0.684-0.495-1.5-2.57-2.28-2.2 0.549-1.31-1.12-3.07 0.391-0.32 0.486-0.992-0.846z" fill="#c2d9d9"/>
+  <circle r="2.04" fill="#3a352c" stroke="#3a352c" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" style="paint-order:stroke fill markers"/>
  </g>
  <g id="low-tundra-city">
   <path d="m-5.18-2.5-1.35 2 2.5 2.75 1.1-0.695 2.3 1.54 2.22-1.11 2.12-0.745 3.27 0.684-0.495-1.5-2.57-2.28-2.2 0.549-1.31-1.12-3.07 0.391-0.32 0.486-0.992-0.846z" fill="#c2d9d9"/>
+  <circle r="2.04" fill="#3a352c" stroke="#3a352c" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" style="paint-order:stroke fill markers"/>
+  <circle r="3.41" fill="none" stroke="#3a352c" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" style="paint-order:stroke fill markers"/>
  </g>
  <g id="low-tundra-village">
   <path d="m-5.18-2.5-1.35 2 2.5 2.75 1.1-0.695 2.3 1.54 2.22-1.11 2.12-0.745 3.27 0.684-0.495-1.5-2.57-2.28-2.2 0.549-1.31-1.12-3.07 0.391-0.32 0.486-0.992-0.846z" fill="#c2d9d9"/>
@@ -214,6 +217,11 @@
  </g>
  <g id="low-tundra-dungeon">
   <path d="m-5.18-2.5-1.35 2 2.5 2.75 1.1-0.695 2.3 1.54 2.22-1.11 2.12-0.745 3.27 0.684-0.495-1.5-2.57-2.28-2.2 0.549-1.31-1.12-3.07 0.391-0.32 0.486-0.992-0.846z" fill="#c2d9d9"/>
+  <path d="m-2.71-2.35h5.43l-2.71 4.7z" fill="#3a352cff"/>
+ </g>
+ <g id="low-tundra-inn">
+  <path d="m-5.18-2.5-1.35 2 2.5 2.75 1.1-0.695 2.3 1.54 2.22-1.11 2.12-0.745 3.27 0.684-0.495-1.5-2.57-2.28-2.2 0.549-1.31-1.12-3.07 0.391-0.32 0.486-0.992-0.846z" fill="#c2d9d9"/>
+  <rect x="-1.65" y="-1.65" width="3.3" height="3.3" ry="0" fill="#3a352c"/>
  </g>
  <g id="forest">
   <ellipse cx="3.96" cy="1.69" rx="2.93" ry=".82" fill="#454837" style="paint-order:fill markers stroke"/>
