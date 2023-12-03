@@ -113,6 +113,10 @@ p {
   margin-bottom: 2.5rem;
 }
 
+li p {
+  margin-top: 1.5rem;
+}
+
 li ul li p {
   margin-bottom: 0.5rem;
 }
@@ -236,6 +240,15 @@ th {
 }
 
 .condensed + table th {
+  font-size: 1.25rem !important;
+}
+
+table.condensed td {
+  font-size: 1.65rem !important;
+  text-align: left;
+}
+
+table.condensed th {
   font-size: 1.25rem !important;
 }
 

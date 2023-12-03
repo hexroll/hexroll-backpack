@@ -80,7 +80,6 @@ ipcMain.handle('get-html', async (event, uuid) => {
 
 ipcMain.handle('get-city', async (event, uuid) => {
   return new Promise(async (resolve) => {
-    const db = sqlite3(app.getPath('userData') + '/test.db');
     const row = app.stmt.get(uuid + '_city');
     resolve(row.value);
   });

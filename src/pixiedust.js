@@ -56,9 +56,9 @@ module$utils.uuidv4=uuidv4$$module$utils;const html$$module$readme=$jscompDefaul
           </div>
           <div style="display:flex;flex-wrap:wrap;background: #e1e1e1;">
             ${[{id:"barbarian",scale:7,light:30,pc:!0},{id:"thief",scale:7,light:30,pc:!0},{id:"elf",scale:7,light:60,pc:!0},{id:"fighter",scale:7,light:30,pc:!0},{id:"cleric",scale:7,light:30,pc:!0},{id:"magicuser",scale:7,light:30,pc:!0},{id:"ranger",scale:7,light:30,pc:!0},{id:"miner",scale:7,light:60,pc:!0},{id:"sorcerer",scale:7,light:30,pc:!0},{id:"spearthrower",scale:7,light:30,pc:!0},{id:"barbarian",scale:7,pc:!0},{id:"thief",scale:7,pc:!0},{id:"elf",scale:7,pc:!0},{id:"fighter",scale:7,pc:!0},
-{id:"cleric",scale:7,pc:!0},{id:"magicuser",scale:7,pc:!0},{id:"ranger",scale:7,pc:!0},{id:"miner",scale:7,pc:!0},{id:"sorcerer",scale:7,pc:!0},{id:"spearthrower",scale:7,pc:!0},{id:"body",scale:7},{id:"largechest",scale:8},{id:"chest",scale:8},{id:"coins",scale:8},{id:"bag",scale:8},{id:"barrel",scale:8},{id:"goblin",scale:7},{id:"cultist",scale:7},{id:"orc",scale:5},{id:"vampire",scale:7},{id:"skeleton_a",scale:7},{id:"zombie",scale:7},{id:"skeleton_b",scale:7},{id:"shrieker",scale:5},{id:"stirge",
-scale:4},{id:"gargoyle",scale:5},{id:"displacer",scale:5},{id:"snake",scale:5},{id:"spider",scale:5},{id:"wolf",scale:5},{id:"bigcat",scale:3},{id:"bats",scale:4},{id:"giantbat",scale:3},{id:"insects",scale:3},{id:"tick",scale:5},{id:"centepide",scale:3},{id:"giantrat",scale:5},{id:"cockatrice",scale:5},{id:"bear",scale:4},{id:"slime",scale:8},{id:"gcube",scale:3},{id:"owlbear",scale:3},{id:"chimera",scale:3},{id:"minotaur",scale:3},{id:"cyclop",scale:3},{id:"dragon",scale:2},{id:"purpleworm",scale:1},
-{id:"biglantern",scale:4,light:300}].map(p=>html$$module$readme`
+{id:"cleric",scale:7,pc:!0},{id:"magicuser",scale:7,pc:!0},{id:"ranger",scale:7,pc:!0},{id:"miner",scale:7,pc:!0},{id:"sorcerer",scale:7,pc:!0},{id:"spearthrower",scale:7,pc:!0},{id:"body",scale:7},{id:"largechest",scale:8},{id:"chest",scale:8},{id:"coins",scale:8},{id:"bag",scale:8},{id:"barrel",scale:8},{id:"altar",scale:5},{id:"pit",scale:7},{id:"speartrap",scale:6},{id:"fcaptive",scale:7},{id:"mcaptive",scale:7},{id:"goblin",scale:7},{id:"cultist",scale:7},{id:"gnoll",scale:7},{id:"kobold",scale:7},
+{id:"orc",scale:5},{id:"skeleton_a",scale:7},{id:"skeleton_b",scale:7},{id:"zombie",scale:7},{id:"wight",scale:7},{id:"vampire",scale:7},{id:"shrieker",scale:5},{id:"stirge",scale:4},{id:"gargoyle",scale:5},{id:"displacer",scale:5},{id:"snake",scale:5},{id:"spider",scale:5},{id:"wolf",scale:5},{id:"bigcat",scale:3},{id:"bats",scale:4},{id:"giantbat",scale:3},{id:"insects",scale:3},{id:"tick",scale:5},{id:"centepide",scale:3},{id:"giantrat",scale:5},{id:"cockatrice",scale:5},{id:"flailsnail",scale:3},
+{id:"bear",scale:4},{id:"slime",scale:8},{id:"gcube",scale:3},{id:"owlbear",scale:3},{id:"beholder",scale:3},{id:"chimera",scale:3},{id:"minotaur",scale:3},{id:"gorgon",scale:3},{id:"cyclop",scale:3},{id:"demon",scale:4},{id:"dragon",scale:2},{id:"trex",scale:1},{id:"purpleworm",scale:1},{id:"biglantern",scale:4,light:300}].map(p=>html$$module$readme`
                 <div style="width:150px">
                   <a onClick=${()=>this.onClick(p)}>
                     <svg
@@ -327,7 +327,7 @@ scale:4},{id:"gargoyle",scale:5},{id:"displacer",scale:5},{id:"snake",scale:5},{
         </div>
       </div>`}}var module$readme={};module$readme.ReadmeDialog=ReadmeDialog$$module$readme;module$readme.TokenChooserDialog=TokenChooserDialog$$module$readme;module$readme.VttDialog=VttDialog$$module$readme;const is_electron$$module$api_shim=!0;function api_call_html$$module$api_shim(a,e,p){return new Promise(async t=>{let A=await window.api.get(p);t(A)})}function api_call_map$$module$api_shim(a){return new Promise(async e=>{let p=JSON.parse(await window.api.map());e(p)})}function api_call_dungeon$$module$api_shim(a,e){return new Promise(async p=>{let t=JSON.parse(await window.api.dungeon(e));p(t)})}
 function api_call_hazards$$module$api_shim(a,e){return new Promise(async p=>{let t=JSON.parse(await window.api.hazards(e));p(t)})}function api_call_city$$module$api_shim(a,e){return new Promise(async p=>{let t=JSON.parse(await window.api.city(e));p(t)})}function api_call_version$$module$api_shim(a){return new Promise(async e=>{e({})})}function api_call_search$$module$api_shim(a,e){return new Promise(async p=>{let t={};t.results=await window.api.search(e);p(t)})}var module$api_shim={};
-module$api_shim.api_call_city=api_call_city$$module$api_shim;module$api_shim.api_call_dungeon=api_call_dungeon$$module$api_shim;module$api_shim.api_call_hazards=api_call_hazards$$module$api_shim;module$api_shim.api_call_html=api_call_html$$module$api_shim;module$api_shim.api_call_map=api_call_map$$module$api_shim;module$api_shim.api_call_search=api_call_search$$module$api_shim;module$api_shim.api_call_version=api_call_version$$module$api_shim;module$api_shim.is_electron=is_electron$$module$api_shim;const BUILD_ID$$module$version="2311051832";var module$version={};module$version.BUILD_ID=BUILD_ID$$module$version;var t$$module$libs$hooks_module,r$$module$libs$hooks_module,u$$module$libs$hooks_module,i$$module$libs$hooks_module,o$$module$libs$hooks_module=0,f$$module$libs$hooks_module=[],c$$module$libs$hooks_module=[],e$$module$libs$hooks_module=l$$module$libs$preact.__b,a$$module$libs$hooks_module=l$$module$libs$preact.__r,v$$module$libs$hooks_module=l$$module$libs$preact.diffed,l$$module$libs$hooks_module=l$$module$libs$preact.__c,m$$module$libs$hooks_module=l$$module$libs$preact.unmount;
+module$api_shim.api_call_city=api_call_city$$module$api_shim;module$api_shim.api_call_dungeon=api_call_dungeon$$module$api_shim;module$api_shim.api_call_hazards=api_call_hazards$$module$api_shim;module$api_shim.api_call_html=api_call_html$$module$api_shim;module$api_shim.api_call_map=api_call_map$$module$api_shim;module$api_shim.api_call_search=api_call_search$$module$api_shim;module$api_shim.api_call_version=api_call_version$$module$api_shim;module$api_shim.is_electron=is_electron$$module$api_shim;const BUILD_ID$$module$version="2312031033";var module$version={};module$version.BUILD_ID=BUILD_ID$$module$version;var t$$module$libs$hooks_module,r$$module$libs$hooks_module,u$$module$libs$hooks_module,i$$module$libs$hooks_module,o$$module$libs$hooks_module=0,f$$module$libs$hooks_module=[],c$$module$libs$hooks_module=[],e$$module$libs$hooks_module=l$$module$libs$preact.__b,a$$module$libs$hooks_module=l$$module$libs$preact.__r,v$$module$libs$hooks_module=l$$module$libs$preact.diffed,l$$module$libs$hooks_module=l$$module$libs$preact.__c,m$$module$libs$hooks_module=l$$module$libs$preact.unmount;
 function d$$module$libs$hooks_module(a,e){l$$module$libs$preact.__h&&l$$module$libs$preact.__h(r$$module$libs$hooks_module,a,o$$module$libs$hooks_module||e);o$$module$libs$hooks_module=0;e=r$$module$libs$hooks_module.__H||(r$$module$libs$hooks_module.__H={__:[],__h:[]});return a>=e.__.length&&e.__.push({__V:c$$module$libs$hooks_module}),e.__[a]}function h$$module$libs$hooks_module(a){return o$$module$libs$hooks_module=1,s$$module$libs$hooks_module(B$$module$libs$hooks_module,a)}
 function s$$module$libs$hooks_module(a,e,p){var t=d$$module$libs$hooks_module(t$$module$libs$hooks_module++,2);if(t.t=a,!t.__c&&(t.__=[p?p(e):B$$module$libs$hooks_module(void 0,e),function(K){var H=t.__N?t.__N[0]:t.__[0];K=t.t(H,K);H!==K&&(t.__N=[K,t.__[1]],t.__c.setState({}))}],t.__c=r$$module$libs$hooks_module,!r$$module$libs$hooks_module.u)){var A=function(K,H,J){if(!t.__c.__H)return!0;var I=t.__c.__H.__.filter(function(Q){return Q.__c});if(I.every(function(Q){return!Q.__N}))return!D||D.call(this,
 K,H,J);var N=!1;return I.forEach(function(Q){if(Q.__N){var O=Q.__[0];Q.__=Q.__N;Q.__N=void 0;O!==Q.__[0]&&(N=!0)}}),!(!N&&t.__c.props===K)&&(!D||D.call(this,K,H,J))};r$$module$libs$hooks_module.u=!0;var D=r$$module$libs$hooks_module.shouldComponentUpdate,F=r$$module$libs$hooks_module.componentWillUpdate;r$$module$libs$hooks_module.componentWillUpdate=function(K,H,J){if(this.__e){var I=D;D=void 0;A(K,H,J);D=I}F&&F.call(this,K,H,J)};r$$module$libs$hooks_module.shouldComponentUpdate=A}return t.__N||
@@ -2456,13 +2456,13 @@ function makePath$$module$settlements(a){let e="M "+a[0][0]+" "+a[0][1]+" ";for(
 function makePolygonFromLine$$module$settlements(a,e){a=pointsToCoords$$module$settlements(thickLineToPolygon$$module$settlements(coordsToPoints$$module$settlements(a),e));e="M "+a[0][0]+" "+a[0][1]+" ";for(let p=1;p<a.length;p++)e=e+"L "+a[p][0]+" "+a[p][1]+" ";return e+"Z"}
 function makeSmoothPolygonFromLine$$module$settlements(a,e){a=a.slice();e=pointsToCoords$$module$settlements(thickLineToPolygon$$module$settlements(coordsToPoints$$module$settlements(a),e));e.push(e[0]);e=turf.polygon([e]);return makeSmoothPolygon$$module$settlements(e.geometry.coordinates[0])}
 function makeMergedPolygon$$module$settlements(a,e,p){a=a.slice();e[0].push(e[0][0]);e=turf.polygon(e);const t=turf.centerOfMass(e).geometry.coordinates;a.unshift(t);p=pointsToCoords$$module$settlements(thickLineToPolygon$$module$settlements(coordsToPoints$$module$settlements(a),p));p.push(p[0]);p=turf.polygon([p]);p=turf.union(e,p);return makeSmoothPolygon$$module$settlements(p.geometry.coordinates[0])}
-class Marker$$module$settlements extends k$$module$libs$preact{constructor(){super();this.setState({hover:"",radius:3})}mouseover(){this.setState({hover:"marker-label-hover",radius:10})}mouseout(){this.setState({hover:"",radius:3})}getLocationURL(){return"/sandbox/"+this.props.instance+"/location/"+this.props.uuid}render(a,e){const p=""!=e.hover?html$$module$settlements`
+class Marker$$module$settlements extends k$$module$libs$preact{constructor(){super();this.setState({hover:"",radius:3})}mouseover(){this.setState({hover:"marker-label-hover",radius:7})}mouseout(){this.setState({hover:"",radius:3})}getLocationURL(){return"/sandbox/"+this.props.instance+"/location/"+this.props.uuid}render(a,e){let p=5E4>a.zoom_factor?1:Math.sqrt(5E4)/Math.sqrt(a.zoom_factor);p=.3>p?.3:p;const t=""!=e.hover?html$$module$settlements`
             <g
               id="active-poi-label"
               transform="translate( ${a.coords.x} , ${a.coords.y}) rotate(${-1*a.rotate})"
             >
               <text
-                transform="translate( 0, -20)"
+                transform="translate( 0, ${-20*p}) scale(${p})"
                 class="marker-label ${e.hover}"
                 font-size="0.8em"
                 text-anchor="middle"
@@ -2471,19 +2471,21 @@ class Marker$$module$settlements extends k$$module$libs$preact{constructor(){sup
               </text>
             </g>
           `:html$$module$settlements``;return html$$module$settlements`
-      ${p}
+      ${t}
 
       <g
         transform="translate( ${a.coords.x} , ${a.coords.y}) rotate(${-1*a.rotate})"
       >
         <circle
           class="marker-circle"
+          transform="scale(${p})"
           r="${e.radius}"
           fill="${a.uuid==a.location?"#00ff00":"#ff0000"}"
         >
         </circle>
         <a href="${this.getLocationURL()}">
           <circle
+            transform="scale(${p})"
             opacity="0"
             cursor="pointer"
             r="${2*e.radius}"
@@ -2557,9 +2559,9 @@ class Marker$$module$settlements extends k$$module$libs$preact{constructor(){sup
       />
     </g>`}}
 class CityMap$$module$citymap extends k$$module$libs$preact{constructor(){super();this.setState({watabou:null})}fetch_map(a,e,p=!1){const t=window.app.settlements_cache[this.props.uuid];t&&!p&&this.setState({watabou:t.map_data,poi:t.poi});api_call_city$$module$api_shim(a,e).then(A=>{A.map_data.processed_walls=this.preprocess_walls(A.map_data);this.setState({watabou:A.map_data,poi:A.poi});window.app.settlements_cache[this.props.uuid]=A})}componentDidMount(a,e,p){this.fetch_map(this.props.instance,this.props.hex)}componentWillUpdate(a,
-e,p){this.props.uuid==a.uuid&&this.props.location==a.location||this.fetch_map(a.instance,a.hex,!0)}preprocess_walls(a){let e=[],p=[],t=[],A=[];if("mfcg"!=a.features[0].generator)return[];0<a.features[4].geometries.length&&(t=t.concat(a.features[4].geometries[0].coordinates));a.features[13]&&(p=p.concat(a.features[13].coordinates[0][0]));0<a.features[2].geometries.length&&a.features[2].geometries.map(F=>{A=A.concat(F.coordinates)});a.features[3].geometries.map(F=>{F=F.coordinates[0];let K=[],H=null;
-for(const J of F){let I=0;for(const N of p)if(J[0]==N[0]&&J[1]==N[1]&&(I++,1==I)){H=J;break}1!=I?(0==K.length&&H&&(K=[H]),K.push(J)):(K.push(J),1<K.length&&e.push(K),K=[])}K.push(F[0]);e.push(K)});let D=[];e.map(F=>{let K=[],H=F[F.length-1];for(let N=0;N<F.length;N++){const Q=F[N];var J=N==F.length-1?F[0]:F[N+1],I=!1;let O=0;for(const W of t)if(Q[0]==W[0]&&Q[1]==W[1]){I=!0;O=.2;break}for(const W of A)if(Q[0]==W[0]&&Q[1]==W[1]){O=.1;I=!0;break}I?(I=O*J[0]+(1-O)*Q[0],J=O*J[1]+(1-O)*Q[1],K.push([O*H[0]+
-(1-O)*Q[0],O*H[1]+(1-O)*Q[1]]),D.push(K),K=[[I,J]]):K.push(Q);H=Q}D.push(K)});return D}render(a,e){if(!e.watabou||"mfcg"!=e.watabou.features[0].generator)return html$$module$citymap``;const p=e.watabou.features[0].coast_dir||0,t=void 0!==e.watabou.features[0].coast_dir?-900:0,A=e.watabou.features[0].riverWidth;let D=html$$module$citymap``;0<e.watabou.features[4].geometries.length&&13<e.watabou.features.length?D=html$$module$citymap` <${Estuary$$module$citymap}
+e,p){this.props.uuid==a.uuid&&this.props.location==a.location||this.fetch_map(a.instance,a.hex,!0)}preprocess_walls(a){if(!a)return[];let e=[],p=[],t=[],A=[];if("mfcg"!=a.features[0].generator)return[];0<a.features[4].geometries.length&&(t=t.concat(a.features[4].geometries[0].coordinates));a.features[13]&&(p=p.concat(a.features[13].coordinates[0][0]));0<a.features[2].geometries.length&&a.features[2].geometries.map(F=>{A=A.concat(F.coordinates)});a.features[3].geometries.map(F=>{F=F.coordinates[0];
+let K=[],H=null;for(const J of F){let I=0;for(const N of p)if(J[0]==N[0]&&J[1]==N[1]&&(I++,1==I)){H=J;break}1!=I?(0==K.length&&H&&(K=[H]),K.push(J)):(K.push(J),1<K.length&&e.push(K),K=[])}K.push(F[0]);e.push(K)});let D=[];e.map(F=>{let K=[],H=F[F.length-1];for(let N=0;N<F.length;N++){const Q=F[N];var J=N==F.length-1?F[0]:F[N+1],I=!1;let O=0;for(const W of t)if(Q[0]==W[0]&&Q[1]==W[1]){I=!0;O=.2;break}for(const W of A)if(Q[0]==W[0]&&Q[1]==W[1]){O=.1;I=!0;break}I?(I=O*J[0]+(1-O)*Q[0],J=O*J[1]+(1-O)*
+Q[1],K.push([O*H[0]+(1-O)*Q[0],O*H[1]+(1-O)*Q[1]]),D.push(K),K=[[I,J]]):K.push(Q);H=Q}D.push(K)});return D}render(a,e){if(!e.watabou||"mfcg"!=e.watabou.features[0].generator)return html$$module$citymap``;const p=e.watabou.features[0].coast_dir||0,t=void 0!==e.watabou.features[0].coast_dir?-900:0,A=e.watabou.features[0].riverWidth;let D=html$$module$citymap``;0<e.watabou.features[4].geometries.length&&13<e.watabou.features.length?D=html$$module$citymap` <${Estuary$$module$citymap}
         river=${e.watabou.features[4].geometries[0].coordinates}
         water=${e.watabou.features[13].coordinates[0]}
         river_width=${e.watabou.features[0].riverWidth}
@@ -2618,6 +2620,7 @@ for(const J of F){let I=0;for(const N of p)if(J[0]==N[0]&&J[1]==N[1]&&(I++,1==I)
               radius="4"
               rotate=${K}
               location=${a.location}
+              zoom_factor=${a.zoom_factor/5}
             />`)}
           <use xlink:href="#active-poi-label" />
         </g>
@@ -2634,17 +2637,17 @@ F=scaled_cosine$$module$libs$perlin(a);K=scaled_cosine$$module$libs$perlin(e);I=
 N+=F*(perlin$$module$libs$perlin[W+1&PERLIN_SIZE$$module$libs$perlin]-N);Q=perlin$$module$libs$perlin[W+PERLIN_YWRAP$$module$libs$perlin&PERLIN_SIZE$$module$libs$perlin];Q+=F*(perlin$$module$libs$perlin[W+PERLIN_YWRAP$$module$libs$perlin+1&PERLIN_SIZE$$module$libs$perlin]-Q);N+=K*(Q-N);I+=scaled_cosine$$module$libs$perlin(p)*(N-I);H+=I*J;J*=perlin_amp_falloff$$module$libs$perlin;t<<=1;a*=2;A<<=1;e*=2;D<<=1;p*=2;1<=a&&(t++,a--);1<=e&&(A++,e--);1<=p&&(D++,p--)}return H}
 function noiseDetail$$module$libs$perlin(a,e){0<a&&(perlin_octaves$$module$libs$perlin=a);0<e&&(perlin_amp_falloff$$module$libs$perlin=e)}
 function noiseSeed$$module$libs$perlin(a){const e=(()=>{let p,t;return{setSeed(A){t=p=(null==A?4294967296*Math.random():A)>>>0},getSeed(){return p},rand(){t=(1664525*t+1013904223)%4294967296;return t/4294967296}}})();e.setSeed(a);perlin$$module$libs$perlin=Array(PERLIN_SIZE$$module$libs$perlin+1);for(a=0;a<PERLIN_SIZE$$module$libs$perlin+1;a++)perlin$$module$libs$perlin[a]=e.rand()}var module$libs$perlin={};module$libs$perlin.noise=noise$$module$libs$perlin;module$libs$perlin.noiseSeed=noiseSeed$$module$libs$perlin;function metaball$$module$metaballs(a){a.forEach(t=>t.c=[t.x,t.y]);let e="";for(let t=0;t<a.length;t++){var p=a.slice(0,3);a.push(a.shift());const A=curvesBetweenCircles$$module$metaballs(p[0].r,p[1].r,p[0].c,p[1].c);p=curvesBetweenCircles$$module$metaballs(p[1].r,p[2].r,p[1].c,p[2].c);0===t&&(e+=`M ${A.p[1][0]},${A.p[1][1]} `);e+=`C ${A.h[1][0]},${A.h[1][1]} ${A.h[3][0]},${A.h[3][1]} ${A.p[3][0]},${A.p[3][1]}`;e+=`A ${p.r1}, ${p.r1}, 1, 0, 1, ${p.p[1][0]}, ${p.p[1][1]}`}return e+"Z"}
-function metablob$$module$metaballs(a){let e=[];for(let p=0;6>p;p++){const t=getVector$$module$metaballs([a.x,a.y],Math.PI/3*p,.5*a.r);e.push({x:t[0],y:t[1],r:1.5*noise$$module$libs$perlin(.1)+2})}return metaball$$module$metaballs(e)}
+function metablob$$module$metaballs(a,e){let p=[];for(let t=0;6>t;t++){const A=getVector$$module$metaballs([a.x,a.y],Math.PI/3*t,a.r*(.5*noise$$module$libs$perlin(e)+.5));p.push({x:A[0],y:A[1],r:1.5*noise$$module$libs$perlin(e*t)+a.r/2})}return metaball$$module$metaballs(p)}
 function curvesBetweenCircles$$module$metaballs(a,e,p,t,A=2.4,D=.5){var F=Math.PI/2;const K=dist$$module$metaballs(p,t);var H=0,J=0;if(0===a||0===e||K<=Math.abs(a-e))return null;K<a+e&&(H=Math.acos((a*a+K*K-e*e)/(2*a*K)),J=Math.acos((e*e+K*K-a*a)/(2*e*K)));var I=angle$$module$metaballs(t,p),N=Math.acos((a-e)/K),Q=I+H+(N-H)*D,O=I-H-(N-H)*D;H=I+Math.PI-J-(Math.PI-J-N)*D;I=I-Math.PI+J+(Math.PI-J-N)*D;J=getVector$$module$metaballs(p,Q,a);p=getVector$$module$metaballs(p,O,a);N=getVector$$module$metaballs(t,
 H,e);t=getVector$$module$metaballs(t,I,e);const W=a+e;A=Math.min(D*A,dist$$module$metaballs(J,N)/W)*Math.min(1,2*K/(a+e));D=a*A;A*=e;Q=getVector$$module$metaballs(J,Q-F,D);O=getVector$$module$metaballs(p,O+F,D);H=getVector$$module$metaballs(N,H+F,A);F=getVector$$module$metaballs(t,I-F,A);return{p:[J,p,N,t],h:[Q,O,H,F],escaped:K>a,r:e,r1:a}}function dist$$module$metaballs([a,e],[p,t]){return((a-p)**2+(e-t)**2)**.5}function angle$$module$metaballs([a,e],[p,t]){return Math.atan2(e-t,a-p)}
-function getVector$$module$metaballs([a,e],p,t){return[a+t*Math.cos(p),e+t*Math.sin(p)]}var module$metaballs={};module$metaballs.metaball=metaball$$module$metaballs;module$metaballs.metablob=metablob$$module$metaballs;const html$$module$villagemap=$jscompDefaultExport$$module$libs$htm.bind(y$$module$libs$preact);class Road$$module$villagemap extends k$$module$libs$preact{constructor(){super()}render(a){return html$$module$villagemap`<g
-      ><path
+function getVector$$module$metaballs([a,e],p,t){return[a+t*Math.cos(p),e+t*Math.sin(p)]}var module$metaballs={};module$metaballs.metaball=metaball$$module$metaballs;module$metaballs.metablob=metablob$$module$metaballs;const html$$module$villagemap=$jscompDefaultExport$$module$libs$htm.bind(y$$module$libs$preact);class Road$$module$villagemap extends k$$module$libs$preact{constructor(){super()}render(a){return html$$module$villagemap`<g>
+      <path
         d="${makeCurvedPath$$module$settlements(a.coords)}"
         stroke="#333"
         stroke-width="2"
         fill="none"
-    /></g>`}}class Tree$$module$villagemap extends k$$module$libs$preact{constructor(){super()}render(a){a=metablob$$module$metaballs({x:a.coords[0],y:a.coords[1],r:8});return html$$module$villagemap`
-      <path d="${a}" stroke="#334433" fill="#445544" stroke-width="1" />
+    /></g>`}}class Tree$$module$villagemap extends k$$module$libs$preact{constructor(){super()}render(a){a=metablob$$module$metaballs({x:a.coords[0],y:a.coords[1],r:6},a.index);return html$$module$villagemap`
+      <path d="${a}" stroke="#405040" fill="#475f47" stroke-width="0.75" />
     `}}class Building$$module$villagemap extends k$$module$libs$preact{constructor(){super()}render(a){2==a.coords.length&&a.coords[1]?html$$module$villagemap`
           <circle
             cx="${a.coords[0][0][0]}"
@@ -2682,26 +2685,27 @@ return html$$module$villagemap`<g>
         stroke="#333"
         stroke-width="2"
         fill="#998877"
-    /></g>`}}class Field$$module$villagemap extends k$$module$libs$preact{constructor(){super()}render(a){return html$$module$villagemap`<g
-      ><path
+    /></g>`}}class Field$$module$villagemap extends k$$module$libs$preact{constructor(){super()}render(a){return html$$module$villagemap`<g>
+      <path d="${makeSmoothPolygon$$module$settlements(a.coords[0])}" fill="#596f39" />
+      <path
         d="${makeSmoothPolygon$$module$settlements(a.coords[0])}"
-        stroke="#406030"
-        stroke-width="2"
-        fill="#446633"
+        stroke="#506030"
+        stroke-width="1"
+        fill="url(#${a.hex}_diagonalHatch)"
     /></g>`}}
 class VillageMap$$module$villagemap extends k$$module$libs$preact{constructor(){super();this.setState({watabou:null})}fetch_map(a,e,p=!1){const t=window.app.settlements_cache[this.props.uuid];t&&!p&&this.setState({watabou:t.map_data,poi:t.poi});api_call_city$$module$api_shim(a,e).then(A=>{this.setState({watabou:A.map_data,poi:A.poi});window.app.settlements_cache[this.props.uuid]=A})}componentDidMount(a,e,p){this.fetch_map(this.props.instance,this.props.hex)}componentWillUpdate(a,e,p){this.props.uuid==a.uuid&&
 this.props.location==a.location||this.fetch_map(a.instance,a.hex,!0)}render(a,e){if(null===e.watabou||"vg"!=e.watabou.features[0].generator)return html$$module$villagemap``;const p=void 0!==e.watabou.features[0].coast_dir,t=e.watabou.features[0].coast_dir||0,A=void 0!==e.watabou.features[0].coast_dir?-600:0;let D=html$$module$villagemap``,F=html$$module$villagemap``,K=html$$module$villagemap``,H=html$$module$villagemap``;for(const I of e.watabou.features)"squares"==I.id&&(H=html$$module$villagemap`
           ${I.coordinates.map(N=>html$$module$villagemap` <${Square$$module$villagemap} coords=${N} />`)}
         `),"water"==I.id&&(D=html$$module$villagemap`
-          ${I.coordinates.map((N,Q)=>html$$module$villagemap` <${Water$$module$villagemap}
+          ${[I.coordinates.at(-1)].map((N,Q)=>html$$module$villagemap` <${Water$$module$villagemap}
               coast=${p}
               coords=${N}
               index=${Q}
             />`)}
         `),"fields"==I.id&&(F=html$$module$villagemap`
-          ${I.coordinates.map(N=>html$$module$villagemap` <${Field$$module$villagemap} coords=${N} />`)}
+          ${I.coordinates.map(N=>html$$module$villagemap` <${Field$$module$villagemap} coords=${N} hex=${a.hex} />`)}
         `),"trees"==I.id&&(K=html$$module$villagemap`
-          ${I.coordinates.map((N,Q)=>{if(0==Q%8)return html$$module$villagemap` <${Tree$$module$villagemap} coords=${N} />`})}
+          ${I.coordinates.map((N,Q)=>{if(0==Q%8)return html$$module$villagemap` <${Tree$$module$villagemap} coords=${N} index=${Q} />`})}
         `);const J=60*t;return html$$module$villagemap`
       <defs>
         <radialGradient id="${a.hex}_gradient_alpha">
@@ -2709,6 +2713,21 @@ this.props.location==a.location||this.fetch_map(a.instance,a.hex,!0)}render(a,e)
           <stop offset="23%" stop-color="black" />
         </radialGradient>
       </defs>
+
+      <pattern
+        id="${a.hex}_diagonalHatch"
+        patternUnits="userSpaceOnUse"
+        width="4"
+        height="4"
+      >
+        <path
+          d="M-1,1 l2,-2
+           M0,4 l4,-4
+           M3,5 l2,-2"
+          style="stroke:#546633; stroke-width:1"
+        />
+      </pattern>
+
       <mask id="${a.hex}">
         <polygon
           fill="#ffffff"
@@ -2744,6 +2763,7 @@ this.props.location==a.location||this.fetch_map(a.instance,a.hex,!0)}render(a,e)
               radius="2"
               rotate=${J}
               location=${a.location}
+              zoom_factor=${a.zoom_factor}
             />`)}
           <use xlink:href="#active-poi-label" />
         </g>
@@ -2833,7 +2853,7 @@ a=html$$module$dungeonmap`<path
       stroke="${e}"
       stroke-width="1"
       fill="${e}"
-    />`;return html$$module$dungeonmap`<g>${a} </g>`}}class DungeonArea$$module$dungeonmap extends k$$module$libs$preact{constructor(){super()}make_line(a,e,p,t,A,D,F){let K=0,H=0,J=0;e!=t&&(K=5*a.w,H=e>t?-2:2);p!=A&&(K=5*a.h,J=p>A?-2:2);a="";t=0;for(A=0;A<=K;A++){let I=noise$$module$libs$perlin(t);I*=2==A||A==K-2?1:1==A||A==K-1?.5:0==A||A==K?.3:2;t+=.3;a=a+" L "+(e+I*D+A*H)+","+(p+I*F+A*J)}return a}getPortalMask(a,e){return"E"==a.wall?html$$module$dungeonmap`<rect
+    />`;return html$$module$dungeonmap`<g>${a} </g>`}}class DungeonArea$$module$dungeonmap extends k$$module$libs$preact{constructor(){super()}make_line(a,e,p,t,A,D,F){let K=0,H=0,J=0;e!=t&&(K=5*a.w,H=e>t?-2:2);p!=A&&(K=5*a.h,J=p>A?-2:2);a="";t=0;for(A=1;A<=K;A++){let I=noise$$module$libs$perlin(t);I*=2==A||A==K-2?1:1==A||A==K-1?.5:0==A||A==K?.3:2;t+=.3;a=a+" L "+(e+I*D+A*H)+","+(p+I*F+A*J)}return a}getPortalMask(a,e){return"E"==a.wall?html$$module$dungeonmap`<rect
         x="${10*a.x}"
         y="${10*a.y-.2}"
         width="3"
@@ -2857,8 +2877,8 @@ a=html$$module$dungeonmap`<path
         width="10.4"
         height="3"
         fill="${e}"
-      />`:html$$module$dungeonmap``}get_path(a){const e=10*a.x;if(this.cache)return this.cache;const p=e+10*a.w,t=10*a.y,A=t+10*a.h;return this.cache="M "+e+","+t+this.make_line(a,e,t,p,t,0,-1)+this.make_line(a,p,t,p,A,1,0)+this.make_line(a,p,A,e,A,0,1)+this.make_line(a,e,A,e,t,-1,0)+" Z"}render(a,e){e=a.vbx-0;var p=a.vby-0,t=a.vby+a.vbh+0;if(!(a.x*kScaleMultiplier$$module$dungeonmap>a.vbx+a.vbw+0||a.y*kScaleMultiplier$$module$dungeonmap>t||a.x*kScaleMultiplier$$module$dungeonmap+a.w*kScaleMultiplier$$module$dungeonmap<
-e||a.y*kScaleMultiplier$$module$dungeonmap+a.h*kScaleMultiplier$$module$dungeonmap<p)){e=getAreaMaskFillColor$$module$dungeonmap(a);p=html$$module$dungeonmap`<rect
+      />`:html$$module$dungeonmap``}get_path(a){const e=10*a.x+.25,p=e+10*a.w,t=10*a.y+.25,A=t+10*a.h;return this.cache="M "+e+","+t+this.make_line(a,e,t,p,t,0,-1)+this.make_line(a,p,t,p,A,1,0)+this.make_line(a,p,A,e,A,0,1)+this.make_line(a,e,A,e,t,-1,0)+" Z"}render(a,e){e=a.vbx-0;var p=a.vby-0,t=a.vby+a.vbh+0;if(!(a.x*kScaleMultiplier$$module$dungeonmap>a.vbx+a.vbw+0||a.y*kScaleMultiplier$$module$dungeonmap>t||a.x*kScaleMultiplier$$module$dungeonmap+a.w*kScaleMultiplier$$module$dungeonmap<e||a.y*
+kScaleMultiplier$$module$dungeonmap+a.h*kScaleMultiplier$$module$dungeonmap<p)){e=getAreaMaskFillColor$$module$dungeonmap(a);p=html$$module$dungeonmap`<rect
       x="${10*a.x+.25}"
       y="${10*a.y+.25}"
       width="${10*a.w}"
@@ -3111,13 +3131,12 @@ p||this.uuid_to_coords[e]&&$$$module$libs$preact_router_module("/sandbox/"+this.
           style="stroke-width:0.2;"
         />
       `;let p=3;5E4>a.zoom_factor&&(p=2);let t=html$$module$dungeonmap``;const A=a.offset.x-0,D=a.offset.y-0,F=a.offset.x+a.dim.w+0,K=a.offset.y+a.dim.h+0;if(1<p){let H="";3==p&&(H="filter: url(#displacementFilter)");t=html$$module$dungeonmap`<g opacity="0.3"
-        >${this.corners.map(J=>{if(!J.culler(A,D,F,K))return html$$module$dungeonmap` <circle
-            cx="${10*J.x}"
-            cy="${10*J.y}"
-            r="7"
+        >${this.corners.map(J=>{if(!J.culler(A,D,F,K))return html$$module$dungeonmap` <path
+            transform=${3==p&&"translate(-0.5, -0.5)"}
+            d="${J.d}"
             fill="#444444"
             style="${H}"
-          />`,html$$module$dungeonmap` <path d="${J.d}" fill="#444444" style="${H}" />`})}
+          />`})}
       </g>`}noiseSeed$$module$libs$perlin(10);e=void 0!==e.dungeon.caverns?html$$module$dungeonmap`<${DungeonCaveMap$$module$dungeonmap}
             dungeon=${e.dungeon}
             onClick=${this.cavernClicked}
@@ -3197,8 +3216,8 @@ p||this.uuid_to_coords[e]&&$$$module$libs$preact_router_module("/sandbox/"+this.
       <filter id="noise" x="0%" y="0%" width="100%" height="100%">
         <feTurbulence
           type="fractalNoise"
-          baseFrequency="0.25"
-          numOctaves="10"
+          baseFrequency="0.125"
+          numOctaves="2"
           seed="15"
           stitchTiles="stitch"
           result="turbulence"
@@ -3213,13 +3232,13 @@ p||this.uuid_to_coords[e]&&$$$module$libs$preact_router_module("/sandbox/"+this.
         <feTurbulence
           type="turbulence"
           baseFrequency="0.5"
-          numOctaves="10"
+          numOctaves="2"
           result="turbulence"
         />
         <feDisplacementMap
           in2="turbulence"
           in="SourceGraphic"
-          scale="5"
+          scale="3"
           xChannelSelector="R"
           yChannelSelector="G"
         />
@@ -3362,6 +3381,7 @@ this.props.ox+this.props.dimw+20||e[1]>this.props.oy+this.props.dimh+20)){this.t
               hex=${a.uuid}
               uuid=${a.feature_uuid}
               location=${a.location_uuid}
+              zoom_factor=${a.zoom_factor}
             />
           </g>`:html$$module$hex``:html$$module$hex` <g opacity="${p}" transform="${this.t_poly}">
             <${CityMap$$module$citymap}
@@ -3371,6 +3391,7 @@ this.props.ox+this.props.dimw+20||e[1]>this.props.oy+this.props.dimh+20)){this.t
               feature=${a.feature}
               uuid=${a.feature_uuid}
               location=${a.location_uuid}
+              zoom_factor=${a.zoom_factor}
             />
           </g>`;e="Dungeon"==a.feature&&1E3<a.zoom_factor&&D&&html$$module$hex` <g opacity="${t}" transform="${this.t_poly}">
         <${DungeonMap$$module$dungeonmap}
@@ -3454,7 +3475,7 @@ J))});t.map||(t.map=[]);var F=[];t.map.map(H=>{setupHexProps$$module$api(H);F.pu
     />
   </g>`}
 class VttHexMap$$module$hexmap extends SvgMap$$module$SvgMap{constructor(){super();this.map_data=new MapData$$module$api;const a=getOffset$$module$hex(480,480,0,0);this.setState({offset:{x:a[0],y:a[1]},dim:{w:1500,h:1500},col1:"col1",res:"empty-",hexlist:[],sea:[],flags:[],spinner:!1});this.loaded=!1}fillOceanHexes(a,e,p,t){let A=[];const D=getHexCoords$$module$hex(a,e);a=getHexCoords$$module$hex(a+p,e+t);for(e=D[0]-2;e<a[0]+1;e++)for(p=D[1];p<a[1]+2;p++){t="ocean:"+e+","+p;const F=window.app.yarray.get(t);F&&
-""!=F&&A.push({x:e,y:p,type:"ocean",uuid:t})}return A}navigateToHex(a,e){}filterPointerCapture(a,e){return!1}getMatrix(a){this.props.spinner(1,!0);this.map_data.reload(this.props.instance,a).then(e=>{e&&(this.updateReveals(this.map_data.hexlist),this.setState({hexlist:this.map_data.hexlist,offset:this.loaded?this.state.offset:{x:this.map_data.initial_offset.x-this.state.dim.w/2,y:this.map_data.initial_offset.y-this.state.dim.h/2}}),this.loaded=!0);this.setState({spinner:!1});this.props.spinner(1,
+""!=F&&A.push({x:e,y:p,type:"ocean",uuid:t})}return A}navigateToHex(a,e){}filterPointerCapture(a,e){return!1}getMatrix(a){this.props.spinner(1,!0);this.map_data.reload(this.props.instance,a).then(e=>{e?(this.updateReveals(this.map_data.hexlist),this.setState({hexlist:this.map_data.hexlist,offset:this.loaded?this.state.offset:{x:this.map_data.initial_offset.x-this.state.dim.w/2,y:this.map_data.initial_offset.y-this.state.dim.h/2}}),this.loaded=!0):this.forceUpdate();this.setState({spinner:!1});this.props.spinner(1,
 !1)})}onHexClicked(a,e,p,t,A){}updateReveals(a){for(let e=0;e<a.length;e++){const p=window.app.yarray.get(a[e].uuid);a[e].pod=p&&"partial"==p[0]?a[e].partial_type:a[e].type;a[e].revealed=p&&p[0]}this.setState({hexlist:a})}postMapLoaded(a){this.loaded?a():this.postMapLoadedCallback=a}componentDidMount(a,e,p){this.postMapLoadedCallback=this.updateReveals;this.getMatrix();super.componentDidMount(a,e,p);window.app.yarray.observe(this.yarr_observer=t=>{t.keysChanged.has("flags")?(this.setState({flags:window.app.yarray.get("flags")}),
 this.updateReveals(this.state.hexlist)):t.keysChanged.has("map")?this.getMatrix(!0):this.updateReveals(this.state.hexlist)})}is_within_frustrum(a,e=40){return a.x>this.state.offset.x-e||a.y>this.state.offset.y-e||a.x<this.state.offset.x+this.state.dim.w+e||a.y<this.state.offset.y+this.state.dim.h+e}hexBitmask(){return 0}render(a,e){const p=this.fillOceanHexes(e.offset.x,e.offset.y,e.dim.w,e.dim.h);return html$$module$hexmap`<div
       id="hexmap"
@@ -3945,31 +3966,33 @@ this.delayTimer=setTimeout(function(){e.search(a)},150)}render(a,e){const p=0<e.
       `}}var module$search={};module$search.SearchBar=SearchBar$$module$search;const html$$module$dialogs=$jscompDefaultExport$$module$libs$htm.bind(y$$module$libs$preact);
 class GenerateRealmDialog$$module$dialogs extends ModalDialog$$module$utils{constructor(){super();this.state={show:!0,realm_type:"RealmTypeKingdom",minimum_number_of_regions:6,maximum_number_of_regions:12,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,
 minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_jungle_region:12,maximum_tiles_per_jungle_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32,minimum_tiles_per_tundra_region:12,maximum_tiles_per_tundra_region:32,minimum_number_of_settlements:6,maximum_number_of_settlements:9,cities_probability:2,towns_probability:3,villages_probability:3,minimum_number_of_inns:3,
-maximum_number_of_inns:6,minimum_number_of_dungeons:6,maximum_number_of_dungeons:9,tombs_probability:1,temples_probability:1,caves_probability:1,minimum_number_of_factions:3,maximum_number_of_factions:5,cults_probability:1,militias_probability:1,treasure_factor:1};this.onSubmit=this.onSubmit.bind(this);this.onRealmType=this.onRealmType.bind(this);this.onRealmPopulation=this.onRealmPopulation.bind(this);this.onMinimumNumberOfRegions=this.onMinimumNumberOfRegions.bind(this);this.onMaximumNumberOfRegions=
-this.onMaximumNumberOfRegions.bind(this);this.onMountainsProbability=this.onMountainsProbability.bind(this);this.onMinimumTilesPerMountainsRegion=this.onMinimumTilesPerMountainsRegion.bind(this);this.onMaximumTilesPerMountainsRegion=this.onMaximumTilesPerMountainsRegion.bind(this);this.onMinimumTilesPerForestRegion=this.onMinimumTilesPerForestRegion.bind(this);this.onMaximumTilesPerForestRegion=this.onMaximumTilesPerForestRegion.bind(this);this.onMinimumTilesPerDesertRegion=this.onMinimumTilesPerDesertRegion.bind(this);
-this.onMaximumTilesPerDesertRegion=this.onMaximumTilesPerDesertRegion.bind(this);this.onMinimumTilesPerPlainsRegion=this.onMinimumTilesPerPlainsRegion.bind(this);this.onMaximumTilesPerPlainsRegion=this.onMaximumTilesPerPlainsRegion.bind(this);this.onMinimumTilesPerJungleRegion=this.onMinimumTilesPerJungleRegion.bind(this);this.onMaximumTilesPerJungleRegion=this.onMaximumTilesPerJungleRegion.bind(this);this.onMinimumTilesPerSwampsRegion=this.onMinimumTilesPerSwampsRegion.bind(this);this.onMaximumTilesPerSwampsRegion=
-this.onMaximumTilesPerSwampsRegion.bind(this);this.onMinimumTilesPerTundraRegion=this.onMinimumTilesPerTundraRegion.bind(this);this.onMaximumTilesPerTundraRegion=this.onMaximumTilesPerTundraRegion.bind(this);this.onForestProbability=this.onForestProbability.bind(this);this.onDesertProbability=this.onDesertProbability.bind(this);this.onPlainsProbability=this.onPlainsProbability.bind(this);this.onJungleProbability=this.onJungleProbability.bind(this);this.onSwampsProbability=this.onSwampsProbability.bind(this);
-this.onTundraProbability=this.onTundraProbability.bind(this);this.onMinimumNumberOfSettlements=this.onMinimumNumberOfSettlements.bind(this);this.onMaximumNumberOfSettlements=this.onMaximumNumberOfSettlements.bind(this);this.onCitiesProbability=this.onCitiesProbability.bind(this);this.onTownsProbability=this.onTownsProbability.bind(this);this.onVillagesProbability=this.onVillagesProbability.bind(this);this.onMinimumNumberOfInns=this.onMinimumNumberOfInns.bind(this);this.onMaximumNumberOfInns=this.onMaximumNumberOfInns.bind(this);
-this.onMinimumNumberOfDungeons=this.onMinimumNumberOfDungeons.bind(this);this.onMaximumNumberOfDungeons=this.onMaximumNumberOfDungeons.bind(this);this.onTombsProbability=this.onTombsProbability.bind(this);this.onTemplesProbability=this.onTemplesProbability.bind(this);this.onCavesProbability=this.onCavesProbability.bind(this);this.onMinimumNumberOfFactions=this.onMinimumNumberOfFactions.bind(this);this.onMaximumNumberOfFactions=this.onMaximumNumberOfFactions.bind(this);this.onCultsProbability=this.onCultsProbability.bind(this);
-this.onMilitiasProbability=this.onMilitiasProbability.bind(this);this.onTreasureFactor=this.onTreasureFactor.bind(this)}show(){this.setState({show:!0})}hide(){this.setState({show:!1})}onRealmType(a){"RealmTypeLands"==a.target.value&&this.setState({realm_type:"RealmTypeLands",minimum_number_of_regions:6,maximum_number_of_regions:12,mountains_probability:3,forest_probability:0,desert_probability:1,plains_probability:0,jungle_probability:4,swamps_probability:1,tundra_probability:0,minimum_tiles_per_mountains_region:12,
-maximum_tiles_per_mountains_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_jungle_region:12,maximum_tiles_per_jungle_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeKingdom"==a.target.value&&this.setState({realm_type:"RealmTypeKingdom",minimum_number_of_regions:6,maximum_number_of_regions:12,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,
-tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeEmpire"==a.target.value&&this.setState({realm_type:"RealmTypeEmpire",minimum_number_of_regions:24,maximum_number_of_regions:32,
-mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});
-"RealmTypeDuchy"==a.target.value&&this.setState({realm_type:"RealmTypeDuchy",minimum_number_of_regions:4,maximum_number_of_regions:8,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,
-maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32})}onRealmPopulation(a){"now"==a.target.value&&this.setState({minimum_number_of_settlements:6,maximum_number_of_settlements:9,minimum_number_of_inns:6,maximum_number_of_inns:9,minimum_number_of_factions:3,maximum_number_of_factions:5});"later"==a.target.value&&this.setState({minimum_number_of_settlements:0,maximum_number_of_settlements:0,minimum_number_of_inns:0,maximum_number_of_inns:0,minimum_number_of_factions:0,
-maximum_number_of_factions:0})}onMinimumNumberOfRegions(a){this.state.minimum_number_of_regions=a.target.value}onMaximumNumberOfRegions(a){this.state.maximum_number_of_regions=a.target.value}onMountainsProbability(a){this.state.mountains_probability=a.target.value}onMinimumTilesPerMountainsRegion(a){this.state.minimum_tiles_per_mountains_region=a.target.value}onMaximumTilesPerMountainsRegion(a){this.state.maximum_tiles_per_mountains_region=a.target.value}onMinimumTilesPerForestRegion(a){this.state.minimum_tiles_per_forest_region=
-a.target.value}onMaximumTilesPerForestRegion(a){this.state.maximum_tiles_per_forest_region=a.target.value}onMinimumTilesPerDesertRegion(a){this.state.minimum_tiles_per_desert_region=a.target.value}onMaximumTilesPerDesertRegion(a){this.state.maximum_tiles_per_desert_region=a.target.value}onMinimumTilesPerPlainsRegion(a){this.state.minimum_tiles_per_plains_region=a.target.value}onMaximumTilesPerPlainsRegion(a){this.state.maximum_tiles_per_plains_region=a.target.value}onMinimumTilesPerJungleRegion(a){this.state.minimum_tiles_per_jungle_region=
-a.target.value}onMaximumTilesPerJungleRegion(a){this.state.maximum_tiles_per_jungle_region=a.target.value}onMinimumTilesPerSwampsRegion(a){this.state.minimum_tiles_per_swamps_region=a.target.value}onMaximumTilesPerSwampsRegion(a){this.state.maximum_tiles_per_swamps_region=a.target.value}onMinimumTilesPerTundraRegion(a){this.state.minimum_tiles_per_tundra_region=a.target.value}onMaximumTilesPerTundraRegion(a){this.state.maximum_tiles_per_tundra_region=a.target.value}onForestProbability(a){this.state.forest_probability=
-a.target.value}onDesertProbability(a){this.state.desert_probability=a.target.value}onPlainsProbability(a){this.state.plains_probability=a.target.value}onJungleProbability(a){this.state.jungle_probability=a.target.value}onSwampsProbability(a){this.state.swamps_probability=a.target.value}onTundraProbability(a){this.state.tundra_probability=a.target.value}onMinimumNumberOfSettlements(a){this.state.minimum_number_of_settlements=a.target.value}onMaximumNumberOfSettlements(a){this.state.maximum_number_of_settlements=
-a.target.value}onCitiesProbability(a){this.state.cities_probability=a.target.value}onTownsProbability(a){this.state.towns_probability=a.target.value}onVillagesProbability(a){this.state.villages_probability=a.target.value}onMinimumNumberOfInns(a){this.state.minimum_number_of_inns=a.target.value}onMaximumNumberOfInns(a){this.state.maximum_number_of_inns=a.target.value}onMinimumNumberOfDungeons(a){this.state.minimum_number_of_dungeons=a.target.value}onMaximumNumberOfDungeons(a){this.state.maximum_number_of_dungeons=
-a.target.value}onTombsProbability(a){this.state.tombs_probability=a.target.value}onTemplesProbability(a){this.state.temples_probability=a.target.value}onCavesProbability(a){this.state.caves_probability=a.target.value}onMinimumNumberOfFactions(a){this.state.minimum_number_of_factions=a.target.value}onMaximumNumberOfFactions(a){this.state.maximum_number_of_factions=a.target.value}onCultsProbability(a){this.state.cults_probability=a.target.value}onMilitiasProbability(a){this.state.militias_probability=
-a.target.value}onTreasureFactor(a){this.state.treasure_factor=a.target.value}onSubmit(){this.props.onOkay("Generic",{realm_type:this.state.realm_type,minimum_number_of_regions:parseInt(this.state.minimum_number_of_regions),maximum_number_of_regions:parseInt(this.state.maximum_number_of_regions),mountains_probability:parseInt(this.state.mountains_probability),forest_probability:parseInt(this.state.forest_probability),desert_probability:parseInt(this.state.desert_probability),plains_probability:parseInt(this.state.plains_probability),
-jungle_probability:parseInt(this.state.jungle_probability),swamps_probability:parseInt(this.state.swamps_probability),tundra_probability:parseInt(this.state.tundra_probability),minimum_tiles_per_mountains_region:parseInt(this.state.minimum_tiles_per_mountains_region),maximum_tiles_per_mountains_region:parseInt(this.state.maximum_tiles_per_mountains_region),minimum_tiles_per_forest_region:parseInt(this.state.minimum_tiles_per_forest_region),maximum_tiles_per_forest_region:parseInt(this.state.maximum_tiles_per_forest_region),
-minimum_tiles_per_desert_region:parseInt(this.state.minimum_tiles_per_desert_region),maximum_tiles_per_desert_region:parseInt(this.state.maximum_tiles_per_desert_region),minimum_tiles_per_plains_region:parseInt(this.state.minimum_tiles_per_plains_region),maximum_tiles_per_plains_region:parseInt(this.state.maximum_tiles_per_plains_region),minimum_tiles_per_jungle_region:parseInt(this.state.minimum_tiles_per_jungle_region),maximum_tiles_per_jungle_region:parseInt(this.state.maximum_tiles_per_jungle_region),
-minimum_tiles_per_swamps_region:parseInt(this.state.minimum_tiles_per_swamps_region),maximum_tiles_per_swamps_region:parseInt(this.state.maximum_tiles_per_swamps_region),minimum_tiles_per_tundra_region:parseInt(this.state.minimum_tiles_per_tundra_region),maximum_tiles_per_tundra_region:parseInt(this.state.maximum_tiles_per_tundra_region),minimum_number_of_settlements:parseInt(this.state.minimum_number_of_settlements),maximum_number_of_settlements:parseInt(this.state.maximum_number_of_settlements),
-cities_probability:parseInt(this.state.cities_probability),towns_probability:parseInt(this.state.towns_probability),villages_probability:parseInt(this.state.villages_probability),minimum_number_of_inns:parseInt(this.state.minimum_number_of_inns),maximum_number_of_inns:parseInt(this.state.maximum_number_of_inns),minimum_number_of_dungeons:parseInt(this.state.minimum_number_of_dungeons),maximum_number_of_dungeons:parseInt(this.state.maximum_number_of_dungeons),tombs_probability:parseInt(this.state.tombs_probability),
-temples_probability:parseInt(this.state.temples_probability),caves_probability:parseInt(this.state.caves_probability),minimum_number_of_factions:parseInt(this.state.minimum_number_of_factions),maximum_number_of_factions:parseInt(this.state.maximum_number_of_factions),cults_probability:parseInt(this.state.cults_probability),militias_probability:parseInt(this.state.militias_probability),treasure_factor:parseFloat(this.state.treasure_factor)});this.setState({show:!1})}okay(a){this.props.onOkay(a);this.setState({show:!1})}cancel(){$$$module$libs$preact_router_module("/sandbox/"+
-this.props.instance)}render(a,e){return e.show?html$$module$dialogs` <!-- The Modal -->
+maximum_number_of_inns:6,minimum_number_of_dungeons:6,maximum_number_of_dungeons:9,tombs_probability:1,temples_probability:1,caves_probability:1,minimum_number_of_factions:3,maximum_number_of_factions:5,cults_probability:1,militias_probability:1,syndicates_probability:1,treasure_factor:1};this.onSubmit=this.onSubmit.bind(this);this.onRealmType=this.onRealmType.bind(this);this.onRealmPopulation=this.onRealmPopulation.bind(this);this.onMinimumNumberOfRegions=this.onMinimumNumberOfRegions.bind(this);
+this.onMaximumNumberOfRegions=this.onMaximumNumberOfRegions.bind(this);this.onMountainsProbability=this.onMountainsProbability.bind(this);this.onMinimumTilesPerMountainsRegion=this.onMinimumTilesPerMountainsRegion.bind(this);this.onMaximumTilesPerMountainsRegion=this.onMaximumTilesPerMountainsRegion.bind(this);this.onMinimumTilesPerForestRegion=this.onMinimumTilesPerForestRegion.bind(this);this.onMaximumTilesPerForestRegion=this.onMaximumTilesPerForestRegion.bind(this);this.onMinimumTilesPerDesertRegion=
+this.onMinimumTilesPerDesertRegion.bind(this);this.onMaximumTilesPerDesertRegion=this.onMaximumTilesPerDesertRegion.bind(this);this.onMinimumTilesPerPlainsRegion=this.onMinimumTilesPerPlainsRegion.bind(this);this.onMaximumTilesPerPlainsRegion=this.onMaximumTilesPerPlainsRegion.bind(this);this.onMinimumTilesPerJungleRegion=this.onMinimumTilesPerJungleRegion.bind(this);this.onMaximumTilesPerJungleRegion=this.onMaximumTilesPerJungleRegion.bind(this);this.onMinimumTilesPerSwampsRegion=this.onMinimumTilesPerSwampsRegion.bind(this);
+this.onMaximumTilesPerSwampsRegion=this.onMaximumTilesPerSwampsRegion.bind(this);this.onMinimumTilesPerTundraRegion=this.onMinimumTilesPerTundraRegion.bind(this);this.onMaximumTilesPerTundraRegion=this.onMaximumTilesPerTundraRegion.bind(this);this.onForestProbability=this.onForestProbability.bind(this);this.onDesertProbability=this.onDesertProbability.bind(this);this.onPlainsProbability=this.onPlainsProbability.bind(this);this.onJungleProbability=this.onJungleProbability.bind(this);this.onSwampsProbability=
+this.onSwampsProbability.bind(this);this.onTundraProbability=this.onTundraProbability.bind(this);this.onMinimumNumberOfSettlements=this.onMinimumNumberOfSettlements.bind(this);this.onMaximumNumberOfSettlements=this.onMaximumNumberOfSettlements.bind(this);this.onCitiesProbability=this.onCitiesProbability.bind(this);this.onTownsProbability=this.onTownsProbability.bind(this);this.onVillagesProbability=this.onVillagesProbability.bind(this);this.onMinimumNumberOfInns=this.onMinimumNumberOfInns.bind(this);
+this.onMaximumNumberOfInns=this.onMaximumNumberOfInns.bind(this);this.onMinimumNumberOfDungeons=this.onMinimumNumberOfDungeons.bind(this);this.onMaximumNumberOfDungeons=this.onMaximumNumberOfDungeons.bind(this);this.onTombsProbability=this.onTombsProbability.bind(this);this.onTemplesProbability=this.onTemplesProbability.bind(this);this.onCavesProbability=this.onCavesProbability.bind(this);this.onMinimumNumberOfFactions=this.onMinimumNumberOfFactions.bind(this);this.onMaximumNumberOfFactions=this.onMaximumNumberOfFactions.bind(this);
+this.onCultsProbability=this.onCultsProbability.bind(this);this.onMilitiasProbability=this.onMilitiasProbability.bind(this);this.onSyndicatesProbability=this.onSyndicatesProbability.bind(this);this.onTreasureFactor=this.onTreasureFactor.bind(this)}show(){this.setState({show:!0})}hide(){this.setState({show:!1})}onRealmType(a){"RealmTypeLands"==a.target.value&&this.setState({realm_type:"RealmTypeLands",minimum_number_of_regions:6,maximum_number_of_regions:12,mountains_probability:3,forest_probability:0,
+desert_probability:1,plains_probability:0,jungle_probability:4,swamps_probability:1,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_jungle_region:12,maximum_tiles_per_jungle_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeKingdom"==a.target.value&&this.setState({realm_type:"RealmTypeKingdom",minimum_number_of_regions:6,
+maximum_number_of_regions:12,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});
+"RealmTypeEmpire"==a.target.value&&this.setState({realm_type:"RealmTypeEmpire",minimum_number_of_regions:24,maximum_number_of_regions:32,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,
+minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeDuchy"==a.target.value&&this.setState({realm_type:"RealmTypeDuchy",minimum_number_of_regions:4,maximum_number_of_regions:8,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,
+minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeIsland"==a.target.value&&this.setState({realm_type:"RealmTypeIsland",minimum_number_of_regions:3,maximum_number_of_regions:7,mountains_probability:3,forest_probability:0,desert_probability:1,plains_probability:0,
+jungle_probability:2,swamps_probability:0,tundra_probability:0,minimum_tiles_per_mountains_region:3,maximum_tiles_per_mountains_region:8,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:3,maximum_tiles_per_desert_region:8,minimum_tiles_per_jungle_region:3,maximum_tiles_per_jungle_region:8,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32,minimum_number_of_dungeons:1,
+maximum_number_of_dungeons:3,minimum_number_of_settlements:0,maximum_number_of_settlements:1,minimum_number_of_inns:0,maximum_number_of_inns:1,minimum_number_of_factions:0,maximum_number_of_factions:1,cities_probability:1,towns_probability:2,villages_probability:4})}onRealmPopulation(a){"now"==a.target.value&&this.setState({minimum_number_of_settlements:6,maximum_number_of_settlements:9,minimum_number_of_inns:6,maximum_number_of_inns:9,minimum_number_of_factions:3,maximum_number_of_factions:5});"later"==
+a.target.value&&this.setState({minimum_number_of_settlements:0,maximum_number_of_settlements:0,minimum_number_of_inns:0,maximum_number_of_inns:0,minimum_number_of_factions:0,maximum_number_of_factions:0})}onMinimumNumberOfRegions(a){this.state.minimum_number_of_regions=a.target.value}onMaximumNumberOfRegions(a){this.state.maximum_number_of_regions=a.target.value}onMountainsProbability(a){this.state.mountains_probability=a.target.value}onMinimumTilesPerMountainsRegion(a){this.state.minimum_tiles_per_mountains_region=
+a.target.value}onMaximumTilesPerMountainsRegion(a){this.state.maximum_tiles_per_mountains_region=a.target.value}onMinimumTilesPerForestRegion(a){this.state.minimum_tiles_per_forest_region=a.target.value}onMaximumTilesPerForestRegion(a){this.state.maximum_tiles_per_forest_region=a.target.value}onMinimumTilesPerDesertRegion(a){this.state.minimum_tiles_per_desert_region=a.target.value}onMaximumTilesPerDesertRegion(a){this.state.maximum_tiles_per_desert_region=a.target.value}onMinimumTilesPerPlainsRegion(a){this.state.minimum_tiles_per_plains_region=
+a.target.value}onMaximumTilesPerPlainsRegion(a){this.state.maximum_tiles_per_plains_region=a.target.value}onMinimumTilesPerJungleRegion(a){this.state.minimum_tiles_per_jungle_region=a.target.value}onMaximumTilesPerJungleRegion(a){this.state.maximum_tiles_per_jungle_region=a.target.value}onMinimumTilesPerSwampsRegion(a){this.state.minimum_tiles_per_swamps_region=a.target.value}onMaximumTilesPerSwampsRegion(a){this.state.maximum_tiles_per_swamps_region=a.target.value}onMinimumTilesPerTundraRegion(a){this.state.minimum_tiles_per_tundra_region=
+a.target.value}onMaximumTilesPerTundraRegion(a){this.state.maximum_tiles_per_tundra_region=a.target.value}onForestProbability(a){this.state.forest_probability=a.target.value}onDesertProbability(a){this.state.desert_probability=a.target.value}onPlainsProbability(a){this.state.plains_probability=a.target.value}onJungleProbability(a){this.state.jungle_probability=a.target.value}onSwampsProbability(a){this.state.swamps_probability=a.target.value}onTundraProbability(a){this.state.tundra_probability=a.target.value}onMinimumNumberOfSettlements(a){this.state.minimum_number_of_settlements=
+a.target.value}onMaximumNumberOfSettlements(a){this.state.maximum_number_of_settlements=a.target.value}onCitiesProbability(a){this.state.cities_probability=a.target.value}onTownsProbability(a){this.state.towns_probability=a.target.value}onVillagesProbability(a){this.state.villages_probability=a.target.value}onMinimumNumberOfInns(a){this.state.minimum_number_of_inns=a.target.value}onMaximumNumberOfInns(a){this.state.maximum_number_of_inns=a.target.value}onMinimumNumberOfDungeons(a){this.state.minimum_number_of_dungeons=
+a.target.value}onMaximumNumberOfDungeons(a){this.state.maximum_number_of_dungeons=a.target.value}onTombsProbability(a){this.state.tombs_probability=a.target.value}onTemplesProbability(a){this.state.temples_probability=a.target.value}onCavesProbability(a){this.state.caves_probability=a.target.value}onMinimumNumberOfFactions(a){this.state.minimum_number_of_factions=a.target.value}onMaximumNumberOfFactions(a){this.state.maximum_number_of_factions=a.target.value}onCultsProbability(a){this.state.cults_probability=
+a.target.value}onMilitiasProbability(a){this.state.militias_probability=a.target.value}onSyndicatesProbability(a){this.state.syndicates_probability=a.target.value}onTreasureFactor(a){this.state.treasure_factor=a.target.value}onSubmit(){this.props.onOkay({RealmTypeKingdom:"RuledRealm",RealmTypeLands:"RuledRealm",RealmTypeDuchy:"RuledRealm",RealmTypeEmpire:"RuledRealm",RealmTypeIsland:"UnruledRealm"}[this.state.realm_type],{realm_type:this.state.realm_type,minimum_number_of_regions:parseInt(this.state.minimum_number_of_regions),
+maximum_number_of_regions:parseInt(this.state.maximum_number_of_regions),mountains_probability:parseInt(this.state.mountains_probability),forest_probability:parseInt(this.state.forest_probability),desert_probability:parseInt(this.state.desert_probability),plains_probability:parseInt(this.state.plains_probability),jungle_probability:parseInt(this.state.jungle_probability),swamps_probability:parseInt(this.state.swamps_probability),tundra_probability:parseInt(this.state.tundra_probability),minimum_tiles_per_mountains_region:parseInt(this.state.minimum_tiles_per_mountains_region),
+maximum_tiles_per_mountains_region:parseInt(this.state.maximum_tiles_per_mountains_region),minimum_tiles_per_forest_region:parseInt(this.state.minimum_tiles_per_forest_region),maximum_tiles_per_forest_region:parseInt(this.state.maximum_tiles_per_forest_region),minimum_tiles_per_desert_region:parseInt(this.state.minimum_tiles_per_desert_region),maximum_tiles_per_desert_region:parseInt(this.state.maximum_tiles_per_desert_region),minimum_tiles_per_plains_region:parseInt(this.state.minimum_tiles_per_plains_region),
+maximum_tiles_per_plains_region:parseInt(this.state.maximum_tiles_per_plains_region),minimum_tiles_per_jungle_region:parseInt(this.state.minimum_tiles_per_jungle_region),maximum_tiles_per_jungle_region:parseInt(this.state.maximum_tiles_per_jungle_region),minimum_tiles_per_swamps_region:parseInt(this.state.minimum_tiles_per_swamps_region),maximum_tiles_per_swamps_region:parseInt(this.state.maximum_tiles_per_swamps_region),minimum_tiles_per_tundra_region:parseInt(this.state.minimum_tiles_per_tundra_region),
+maximum_tiles_per_tundra_region:parseInt(this.state.maximum_tiles_per_tundra_region),minimum_number_of_settlements:parseInt(this.state.minimum_number_of_settlements),maximum_number_of_settlements:parseInt(this.state.maximum_number_of_settlements),cities_probability:parseInt(this.state.cities_probability),towns_probability:parseInt(this.state.towns_probability),villages_probability:parseInt(this.state.villages_probability),minimum_number_of_inns:parseInt(this.state.minimum_number_of_inns),maximum_number_of_inns:parseInt(this.state.maximum_number_of_inns),
+minimum_number_of_dungeons:parseInt(this.state.minimum_number_of_dungeons),maximum_number_of_dungeons:parseInt(this.state.maximum_number_of_dungeons),tombs_probability:parseInt(this.state.tombs_probability),temples_probability:parseInt(this.state.temples_probability),caves_probability:parseInt(this.state.caves_probability),minimum_number_of_factions:parseInt(this.state.minimum_number_of_factions),maximum_number_of_factions:parseInt(this.state.maximum_number_of_factions),cults_probability:parseInt(this.state.cults_probability),
+militias_probability:parseInt(this.state.militias_probability),syndicates_probability:parseInt(this.state.syndicates_probability),treasure_factor:parseFloat(this.state.treasure_factor)});this.setState({show:!1})}okay(a){this.props.onOkay(a);this.setState({show:!1})}cancel(){$$$module$libs$preact_router_module("/sandbox/"+this.props.instance)}render(a,e){return e.show?html$$module$dialogs` <!-- The Modal -->
       <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
@@ -3997,6 +4020,7 @@ this.props.instance)}render(a,e){return e.show?html$$module$dialogs` <!-- The Mo
               <option value="RealmTypeLands">Lands</option>
               <option value="RealmTypeDuchy">Duchy</option>
               <option value="RealmTypeEmpire">Empire</option>
+              <option value="RealmTypeIsland">Island</option>
             </select>
 
             <label for="realm_population">Population:</label>
@@ -4701,6 +4725,21 @@ this.props.instance)}render(a,e){return e.show?html$$module$dialogs` <!-- The Mo
               id="militias_probability"
               name="militias_probability"
             />
+
+            <label for="syndicates_probability"> Syndicates ${"P\u00d7"} </label>
+            <input
+              style="text-align:center"
+              size="3"
+              type="number"
+              value="${e.syndicates_probability}"
+              onInput="${this.onSyndicatesProbability}"
+              min="0"
+              max="10"
+              pattern="[0-9]+"
+              id="syndicates_probability"
+              name="syndicates_probability"
+            />
+
             <h4>Tweaks and Experiments</h4>
             <label for="treasure_factor"> Treasure Factor ${"T\u00d7"} </label>
             <input
