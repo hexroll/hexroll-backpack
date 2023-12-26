@@ -1271,6 +1271,28 @@ a {
   color: #444;
 }
 
+/* BEGIN DETECTABLE HYPERLINKS */
+#entity-container a:not(.map-coords, .npc-anchor, .btn-icon) {
+  border-radius: 5px;
+  user-select: text;
+  white-space: pre;
+  background-color: #dcdcdc;
+  line-height: 1.6em;
+}
+
+#entity-container tr a:not(.map-coords, .npc-anchor, .btn-icon) {
+  background-color: transparent !important;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #666;
+}
+
+#entity-container tr a:not(.map-coords, .npc-anchor, .btn-icon):hover {
+  background-color: #df286d !important;
+}
+
+/* END DETECTABLE HYPERLINKS */
+
 #entity a:hover > i {
   color: #df286d;
 }
@@ -1288,8 +1310,7 @@ a.disabled {
 #entity-container a:not(.btn-icon):hover {
   border-radius: 5px;
   color: #222;
-  background: #ffa700;
-  background: #df286d;
+  background-color: #df286d;
   color: #eee;
 }
 
@@ -1404,7 +1425,7 @@ polygon.borderline {
   opacity: 1;
 }
 
-.region-label {
+.hex-label {
   font-family: 'Lakki Reddy';
   font-weight: bolder;
   paint-order: stroke;
@@ -1412,10 +1433,19 @@ polygon.borderline {
   fill: #333;
   stroke: #ddd;
   stroke-width: 0.5px;
-  stroke-width: 1px;
-  stroke-linecap: butt;
   stroke-linecap: round;
-  stroke-linejoin: miter;
+  stroke-linejoin: bevel;
+}
+
+.region-label {
+  font-family: 'Lakki Reddy';
+  font-weight: bolder;
+  paint-order: stroke;
+  pointer-events: none;
+  fill: #333;
+  stroke: #ddd;
+  stroke-width: 1px;
+  stroke-linecap: round;
   stroke-linejoin: bevel;
 }
 
