@@ -31,7 +31,12 @@ const createWindow = () => {
   });
   mainWindow.setMenuBarVisibility(false);
 
-  dialog.showOpenDialog(null).then((filePaths) => {
+  const dialogOptions = {
+    filters: [{ name: 'Hexroll Backpack Files', extensions: ['hbf'] }],
+    properties: ['openFile'],
+  };
+
+  dialog.showOpenDialog(dialogOptions).then((filePaths) => {
     try {
       app.db = sqlite3(filePaths.filePaths[0]);
       app.stmt = app.db.prepare('SELECT value FROM Entities WHERE uuid=?');

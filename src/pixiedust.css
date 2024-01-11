@@ -143,9 +143,29 @@ ul {
   margin-bottom: 2.5rem;
 }
 
+ul > br {
+  display: inherit;
+}
+
 li {
   margin-bottom: 0.4em;
 }
+
+li.inactive-quest {
+  font-family: arial;
+  color: #bbb;
+  list-style: disclosure-closed;
+}
+
+/* Begin hack for older sandboxes character tavern listing */
+li > a + ul {
+  /* padding-left: 0; */
+}
+
+li > a + ul > li {
+  /* list-style: none; */
+}
+/* End hack for older sandboxes character tavern listing */
 
 blockquote {
   font-family:
@@ -534,7 +554,22 @@ svg#canvas {
   width: 80%;
   max-width: 800px;
   max-height: 60%;
+}
+
+.modal-content-flex {
+  display: flex;
+  flex-flow: column;
+}
+
+.modal-header {
+  border-bottom: 1px solid #cecece;
+  padding: 5px;
+}
+
+.modal-body {
+  flow-grow: 1;
   overflow-y: scroll;
+  padding: 1em;
 }
 
 .modal-content input {
@@ -564,6 +599,28 @@ svg#canvas {
   color: #eee;
   text-decoration: none;
   cursor: pointer;
+}
+
+#realm-generator button + p {
+  display: inline;
+  margin: -0.5em 0 0.5em 0.5em;
+  color: #888;
+  line-height: 0.75em;
+}
+
+#realm-generator h4#scale + p {
+  margin: -0.5em 0 0.25em 0;
+  color: #888;
+}
+
+#realm-generator h4 + p {
+  margin: -0.5em 0 -1em 0;
+  color: #888;
+}
+
+#realm-generator input + p {
+  margin: -0.5em 0 1em 0;
+  color: #888;
 }
 
 .snackbar-close {
@@ -982,6 +1039,9 @@ svg#canvas {
 
 #header h4 {
   margin: 0;
+  /* padding: 0.75px 0px 7.5px 13.75px; */
+  padding-top: 3.5px;
+  padding-bottom: 7.5px;
 }
 
 #header div {
@@ -991,6 +1051,7 @@ svg#canvas {
 #header span.breadcrumbs {
   color: #a1a1a1;
   font-size: 0.7em;
+  /* line-height: 1.5em; */
 }
 
 #header a {
@@ -1002,9 +1063,14 @@ svg#canvas {
   /* color: #222; */
   /* background: #ffa700; */
   color: #fff;
-  background: #df286d;
+  background-color: #df286d;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
+}
+
+#header a.breadcrumbs-icon:hover {
+  background-color: transparent;
+  color: #df286d;
 }
 
 #header.view_visible {
@@ -1073,7 +1139,7 @@ div.small-index {
 
 #content {
   max-width: 35.5em;
-  transition: all 0.2s linear;
+  transition: all 0.4s linear;
   height: auto;
   left: 0px;
 }
@@ -1139,6 +1205,27 @@ div.small-index {
   width: 95%;
 }
 
+.toc-section {
+  display: flow-root;
+}
+
+.toc-section li {
+  margin-bottom: 0.2em !important;
+}
+
+.toc-subsection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 110%;
+  font-size: 85%;
+}
+
+.toc-column {
+  display: flex;
+  flex-flow: column;
+  min-width: 200px;
+}
+
 @media (min-aspect-ratio: 3/3) {
   #content {
     position: absolute;
@@ -1176,6 +1263,16 @@ div.small-index {
   .rect1 {
     width: 40%;
     height: 100%;
+  }
+}
+
+@media (min-aspect-ratio: 7/3) {
+  #content.view_visible {
+    width: 40% !important;
+  }
+
+  .rect1 {
+    width: 60% !important;
   }
 }
 
@@ -1291,6 +1388,20 @@ a {
   background-color: #df286d !important;
 }
 
+a.detectable {
+  border-radius: 5px;
+  user-select: text;
+  white-space: pre;
+  background-color: #dcdcdc;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  line-height: 1.6em;
+}
+
+a.detectable:hover {
+  color: #fff;
+  background-color: #df286d !important;
+}
 /* END DETECTABLE HYPERLINKS */
 
 #entity a:hover > i {
@@ -1600,4 +1711,60 @@ svg#canvs a.test:hover {
   text-align: center;
   opacity: 0.75;
   font-size: 150%;
+}
+
+.tags-input {
+  display: inline-block;
+  padding: 0 2px;
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 26em;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial';
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.tags-input .tag {
+  display: inline-block;
+  background: #eee;
+  color: #444;
+  padding: 0 4px;
+  margin: 4px 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+  user-select: none;
+  cursor: pointer;
+  transition: all 100ms ease;
+}
+
+.tags-input .tag.selected {
+  background-color: #777;
+  border-color: #777;
+  color: #eee;
+}
+
+.tags-input .tag.dupe {
+  transform: scale3d(1.2, 1.2, 1.2);
+  background-color: #fcc;
+  border-color: #700;
+}
+
+.tags-input input {
+  appearance: none !important;
+  display: inline-block !important;
+  padding: 3px;
+  margin: 0 !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  font: inherit !important;
+  font-size: 100% !important;
+  outline: none !important;
+}
+
+.tags-input .selected ~ input {
+  opacity: 0.3;
 }
