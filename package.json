@@ -43,6 +43,6 @@
     "afterSign": "notarize.js"
   },
   "dependencies": {
-    "better-sqlite3": "8.4.0"
+    "better-sqlite3": "9.4.3"
   }
 }
