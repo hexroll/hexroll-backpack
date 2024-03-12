@@ -1315,10 +1315,10 @@
   <polygon points="5 -9 -5 -9 -10 0 -5 9 5 9 10 0" fill="#696950ff" stroke="#343434" stroke-width=".5"/>
 </g>
  <g id="empty-ocean">
-  <polygon points="5 -9 -5 -9 -10 0 -5 9 5 9 10 0" fill="#049" stroke="#25a" stroke-width=".5"/>
+  <polygon points="5 -9 -5 -9 -10 0 -5 9 5 9 10 0" fill="#049" stroke="#59f" stroke-width=".5"/>
  </g>
  <g id="ocean">
-  <polygon points="5 -9 -5 -9 -10 0 -5 9 5 9 10 0" fill="#049" stroke="#25a" stroke-width=".5"/>
+  <polygon points="5 -9 -5 -9 -10 0 -5 9 5 9 10 0" fill="#049" stroke="#59f" stroke-width=".5"/>
  </g>
  <g id="ocean-revealed">
   <polygon points="5 -9 -5 -9 -10 0 -5 9 5 9 10 0" fill="#049" stroke="#021224" stroke-width=".5"/>

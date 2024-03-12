@@ -165,6 +165,7 @@ li > a + ul {
 li > a + ul > li {
   /* list-style: none; */
 }
+
 /* End hack for older sandboxes character tavern listing */
 
 blockquote {
@@ -475,6 +476,7 @@ fieldset {
   cursor: wait;
   pointer-events: none;
 }
+
 #entity-container[spoiler='no'] .revealed a {
   cursor: pointer !important;
   background-color: #ddd !important;
@@ -505,11 +507,13 @@ svg#canvas.desaturated {
 
 svg#canvas.colorful {
   filter: saturate(0.8);
+  /* filter: contrast(1.75) saturate(0.05) brightness(0.5) */
 }
 
 svg#canvas.dungeon {
   background-color: #292828;
 }
+
 svg#canvas.vtt {
   background-color: #d7d7d7;
 }
@@ -556,6 +560,12 @@ svg#canvas {
   height: 100%;
   margin: 0;
   position: sticky;
+}
+
+.token-base-highlight {
+  transition: all 0.4s linear;
+  opacity: 1;
+  fill: #ff0000aa;
 }
 
 /* -----------------------------------------------------------------------*/
@@ -621,6 +631,7 @@ svg#canvas {
 .close a {
   color: #eee;
 }
+
 .close:hover,
 .close:focus {
   color: #eee;
@@ -659,6 +670,7 @@ svg#canvas {
 .snackbar-close a {
   color: #eee;
 }
+
 .snackbar-close:hover,
 .snackbar-close:focus {
   color: #eee;
@@ -758,6 +770,7 @@ svg#canvas {
   transition: all 0.1s linear;
   width: 180px;
 }
+
 #search:focus-within input {
   margin-left: 7px;
   width: 310px;
@@ -789,6 +802,7 @@ svg#canvas {
   border-radius: 5px;
   display: inline-table;
 }
+
 #search-results a:hover {
   border-radius: 5px;
   color: #222;
@@ -796,6 +810,7 @@ svg#canvas {
   background: #df286d;
   color: #eee;
 }
+
 #search-results a:focus {
   border-radius: 5px;
   color: #222;
@@ -804,9 +819,11 @@ svg#canvas {
   color: #eee;
   outline: none;
 }
+
 #search-results a:hover i {
   color: #eee;
 }
+
 #search-results a:focus i {
   color: #eee;
 }
@@ -819,6 +836,7 @@ svg#canvas {
 #search-results a:hover div.details {
   color: #fff;
 }
+
 #search-results a:focus div.details {
   color: #fff;
 }
@@ -836,7 +854,7 @@ svg#canvas {
 /* MAP TOOLS DRAWER                                                       */
 
 #map-toolbox a {
-  color: #ddd;
+  color: #eee;
   text-shadow: 2px 2px 5px #111;
 }
 
@@ -1032,6 +1050,7 @@ svg#canvas {
 #dice-toggles a {
   color: #e1e1e1;
 }
+
 #dice-toggles a:hover {
   color: #df286d;
 }
@@ -1137,13 +1156,16 @@ svg#canvas {
   top: 0px;
   transition: all 0.4s linear;
   z-index: 999;
+  height: 72px;
+  max-height: 72px;
+  background-color: #212121;
 }
 
 #header h4 {
   margin: 0;
-  /* padding: 0.75px 0px 7.5px 13.75px; */
-  padding-top: 3.5px;
-  padding-bottom: 7.5px;
+  padding: 0;
+  height: 72px;
+  max-height: 72px;
 }
 
 #header div {
@@ -1153,7 +1175,29 @@ svg#canvas {
 #header span.breadcrumbs {
   color: #a1a1a1;
   font-size: 0.7em;
+  display: block;
+  vertical-align: super;
   /* line-height: 1.5em; */
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+span[contenteditable='true'] + span {
+  font-size: 0.55em !important;
+}
+
+#header span[contenteditable='true'] {
+  outline: none;
+  text-decoration: underline;
+}
+
+#header #editable-title {
+  transition: all 0.4s linear;
+  display: block;
+  position: absolute;
+  top: 35px;
+  margin-left: 10px;
 }
 
 #header a {
@@ -1183,6 +1227,12 @@ svg#canvas {
 #header.view_hidden {
   top: -72px;
   margin-top: -72px;
+}
+
+/* Keep this for older sandboxes that doesn't use editable titles */
+#hex_title:not(:has(#editable-title)) {
+  padding-top: 0.2em;
+  padding-left: 0.5em;
 }
 
 #header-menu {
@@ -1226,13 +1276,35 @@ div.small-index {
   #content {
     font-size: 75%;
   }
+
+  .rect1 {
+    max-height: calc(100% - 36px) !important;
+  }
+
   #backpacker-snackbar {
     font-size: 75%;
   }
+
   #header {
     white-space: nowrap;
     font-size: 50%;
+    height: 36px;
+    max-height: 36px;
   }
+
+  #header h4 {
+    height: 36px;
+    max-height: 36px;
+  }
+
+  #header span.breadcrumbs {
+    top: 3px;
+  }
+
+  #header #editable-title {
+    top: 18px;
+  }
+
   #header.view_hidden {
     top: -36px;
     margin-top: -36px;
@@ -1349,9 +1421,11 @@ div.small-index {
     z-index: 1000;
     top: 72px;
   }
+
   #content.view_visible {
     width: 60%;
   }
+
   #content.view_hidden {
     left: -1000px;
   }
@@ -1359,6 +1433,7 @@ div.small-index {
   #entity1 {
     width: 100%;
   }
+
   #entity2 {
     width: 100%;
   }
@@ -1392,15 +1467,19 @@ div.small-index {
   #content {
     position: relative;
   }
+
   #content {
     height: calc(60% - 72px);
   }
+
   #content.view_visible {
     width: 100%;
   }
+
   #entity1 {
     width: 95%;
   }
+
   #entity2 {
     width: 95%;
   }
@@ -1514,6 +1593,7 @@ a.detectable:hover {
   color: #fff;
   background-color: #df286d !important;
 }
+
 /* END DETECTABLE HYPERLINKS */
 
 #entity a:hover > i {
@@ -1579,32 +1659,6 @@ polygon.flagged-hex {
   fill: none;
 }
 
-polygon.underwear {
-  fill: #667722;
-}
-
-polygon.underwear-fow {
-  fill: #171910;
-}
-
-polygon.continent {
-  color: #ff0000;
-  stroke: #ff0000;
-  stroke-width: 2;
-  fill: #667722;
-  fill: #8c8e36;
-}
-
-@keyframes fadeBorder {
-  from {
-    fill: #667722ff;
-  }
-
-  to {
-    fill: #66772200;
-  }
-}
-
 polygon.borderline_fixed {
   color: #ff0000;
   stroke: #ff0000;
@@ -1616,7 +1670,6 @@ polygon.borderline {
   color: #ff0000;
   stroke: #ff0000;
   stroke-width: 1;
-  animation: fadeBorder 1s ease-in;
   fill: none;
 }
 
@@ -1646,42 +1699,6 @@ polygon.borderline {
 .marker-label-hover {
   visibility: visible;
   opacity: 1;
-}
-
-.hex-label {
-  font-family: 'Lakki Reddy';
-  font-weight: bolder;
-  paint-order: stroke;
-  pointer-events: none;
-  fill: #333;
-  stroke: #ddd;
-  stroke-width: 0.5px;
-  stroke-linecap: round;
-  stroke-linejoin: bevel;
-}
-
-.region-label {
-  font-family: 'Lakki Reddy';
-  font-weight: bolder;
-  paint-order: stroke;
-  pointer-events: none;
-  fill: #333;
-  stroke: #ddd;
-  stroke-width: 1px;
-  stroke-linecap: round;
-  stroke-linejoin: bevel;
-}
-
-.realm-label {
-  font-family: 'Lakki Reddy';
-  font-weight: bolder;
-  paint-order: stroke;
-  pointer-events: none;
-  fill: #333;
-  stroke: #aaa;
-  stroke-width: 0.2em;
-  stroke-linecap: round;
-  stroke-linejoin: bevel;
 }
 
 .region {
@@ -1768,6 +1785,7 @@ svg#canvas a.test {
 svg#canvs a.test:hover {
   transform: scale(1.25);
 }
+
 .key-button {
   box-sizing: border-box;
   line-height: 2em;
