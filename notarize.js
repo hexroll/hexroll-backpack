@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { notarize } = require('electron-notarize');
+const { notarize } = require('@electron/notarize');
 
 exports.default = async function notarizing(context) {
   const { electronPlatformName, appOutDir } = context;
@@ -13,6 +13,7 @@ exports.default = async function notarizing(context) {
     appBundleId: 'com.hexroll.backpack',
     appPath: `${appOutDir}/${appName}.app`,
     appleId: process.env.APPLEID,
+    teamId: process.env.APPLETEAMID,
     appleIdPassword: process.env.APPLEIDPASS,
   });
 };

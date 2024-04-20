@@ -8,9 +8,9 @@
   "license": "AGPL-3.0-only",
   "devDependencies": {
     "dmg-builder": "^24.6.3",
-    "electron": "25.4.0",
-    "electron-builder": "^24.6.3",
-    "electron-notarize": "^1.2.2"
+    "electron": "28.3.0",
+    "electron-builder": "^24.13.3",
+    "@electron/notarize": "^2.3.0"
   },
   "scripts": {
     "start": "electron .",
@@ -35,6 +35,7 @@
       "gatekeeperAssess": false,
       "entitlements": "build/entitlements.mac.plist",
       "entitlementsInherit": "build/entitlements.mac.plist",
+      "executableName": "HexrollBackpack",
       "icon": "./assets/icon.icns"
     },
     "linux": {
@@ -44,5 +45,21 @@
   },
   "dependencies": {
     "better-sqlite3": "9.4.3"
+  },
+  "resolutions": {
+    "wrap-ansi": "7.0.0",
+    "string-width": "4.2.0",
+    "node-abi": "3.57.0"
+  },
+  "overrides": {
+    "prebuild-install": {
+      "node-abi": "3.57.0"
+    },
+    "prebuild": {
+      "node-abi": "3.57.0"
+    },
+    "robotjs": {
+      "node-abi": "3.57.0"
+    }
   }
 }
