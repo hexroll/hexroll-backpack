@@ -15,7 +15,7 @@ function sign(configuration) {
     console.log(`Signing ${configuration.path}`);
     const { base, dir } = path.parse(configuration.path);
     const tempFile = path.join(TEMP_DIR, base);
-    const setDir = `cd "..\\CodeSignTool-v1.2.7-windows"`;
+    const setDir = `cd "..\\"`;
     const signFile = `CodeSignTool.bat sign -input_file_path="${configuration.path}" -output_dir_path="${TEMP_DIR}" -credential_id="${CREDENTIAL_ID}" -username="${USER_NAME}" -password="${USER_PASSWORD}" -totp_secret="${USER_TOTP}"`;
     const moveFile = `mv "${tempFile}" "${dir}"`;
     childProcess.execSync(`${setDir} && ${signFile} && ${moveFile}`, {
