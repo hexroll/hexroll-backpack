@@ -143,7 +143,7 @@ ul {
   margin-bottom: 2.5rem;
 }
 
-ul > br {
+ul>br {
   display: inherit;
 }
 
@@ -158,11 +158,11 @@ li.inactive-quest {
 }
 
 /* Begin hack for older sandboxes character tavern listing */
-li > a + ul {
+li>a+ul {
   /* padding-left: 0; */
 }
 
-li > a + ul > li {
+li>a+ul>li {
   /* list-style: none; */
 }
 
@@ -217,7 +217,7 @@ code {
   white-space: pre-wrap;
 }
 
-pre > code {
+pre>code {
   padding: 0;
   background-color: transparent;
   white-space: pre;
@@ -255,12 +255,12 @@ th {
   color: #fff;
 }
 
-.condensed + table td {
+.condensed+table td {
   font-size: 1.65rem !important;
   text-align: left;
 }
 
-.condensed + table th {
+.condensed+table th {
   font-size: 1.25rem !important;
 }
 
@@ -423,6 +423,36 @@ input:focus {
 
 input[type='checkbox']:focus {
   outline: 1px dotted #1d7484;
+}
+
+input[type='checkbox'] {
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+}
+
+input[type='checkbox'] {
+  height: 25px;
+  width: 25px;
+  margin-bottom: -5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked::after {
+  content: '✗';
+  font-size: 2em;
+  display: block;
+  text-align: center;
+  color: #2d2d2d;
+  position: absolute;
+  left: -0.125em;
+  top: -0.25em;
 }
 
 label,
@@ -639,24 +669,24 @@ svg#canvas {
   cursor: pointer;
 }
 
-#realm-generator button + p {
+#realm-generator button+p {
   display: inline;
   margin: -0.5em 0 0.5em 0.5em;
   color: #888;
   line-height: 0.75em;
 }
 
-#realm-generator h4#scale + p {
+#realm-generator h4#scale+p {
   margin: -0.5em 0 0.25em 0;
   color: #888;
 }
 
-#realm-generator h4 + p {
+#realm-generator h4+p {
   margin: -0.5em 0 -1em 0;
   color: #888;
 }
 
-#realm-generator input + p {
+#realm-generator input+p {
   margin: -0.5em 0 1em 0;
   color: #888;
 }
@@ -1183,7 +1213,7 @@ svg#canvas {
   left: 10px;
 }
 
-span[contenteditable='true'] + span {
+span[contenteditable='true']+span {
   font-size: 0.55em !important;
 }
 
@@ -1197,7 +1227,6 @@ span[contenteditable='true'] + span {
   display: block;
   position: absolute;
   top: 35px;
-  margin-left: 10px;
 }
 
 #header a {
@@ -1230,7 +1259,7 @@ span[contenteditable='true'] + span {
 }
 
 /* Keep this for older sandboxes that doesn't use editable titles */
-#hex_title:not(:has(#editable-title)) {
+#hex_title {
   padding-top: 0.2em;
   padding-left: 0.5em;
 }
@@ -1554,7 +1583,7 @@ a {
   padding: 3px;
 }
 
-#entity a > i {
+#entity a>i {
   font-size: 75%;
   color: #444;
 }
@@ -1596,7 +1625,7 @@ a.detectable:hover {
 
 /* END DETECTABLE HYPERLINKS */
 
-#entity a:hover > i {
+#entity a:hover>i {
   color: #df286d;
 }
 
@@ -1617,13 +1646,13 @@ a.disabled {
   color: #eee;
 }
 
-h4 > a {
+h4>a {
   float: right;
   margin-right: 1em;
   color: #fff;
 }
 
-h4 > a {
+h4>a {
   float: right;
   margin-right: 1em;
 }
@@ -1803,12 +1832,10 @@ svg#canvs a.test:hover {
   /*   0.5px 0.5px 0.5px #fff; */
   border-width: 1px;
   border-radius: 10px;
-  background: -webkit-linear-gradient(
-    top,
-    #f9f9f9 0%,
-    #d2d2d2 80%,
-    #c0c0c0 100%
-  );
+  background: -webkit-linear-gradient(top,
+      #f9f9f9 0%,
+      #d2d2d2 80%,
+      #c0c0c0 100%);
   font-family: sans-serif;
   display: inline-block;
   transition:
@@ -1895,7 +1922,7 @@ svg#canvs a.test:hover {
   outline: none !important;
 }
 
-.tags-input .selected ~ input {
+.tags-input .selected~input {
   opacity: 0.3;
 }
 

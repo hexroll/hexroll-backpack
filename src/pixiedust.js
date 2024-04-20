@@ -1240,7 +1240,7 @@ b){var c,d,e=a.onChange,g=b.url;b=this.c;a=this.g(P$$module$libs$preact(a.childr
 module$libs$preact_router_module.Route=L$$module$libs$preact_router_module;module$libs$preact_router_module.Router=D$$module$libs$preact_router_module;module$libs$preact_router_module.default=D$$module$libs$preact_router_module;module$libs$preact_router_module.exec=s$$module$libs$preact_router_module;module$libs$preact_router_module.getCurrentUrl=R$$module$libs$preact_router_module;module$libs$preact_router_module.route=$$$module$libs$preact_router_module;
 module$libs$preact_router_module.useRouter=C$$module$libs$preact_router_module;const is_electron$$module$api_shim=!0;function api_call_html$$module$api_shim(a,b,c){return new Promise(async d=>{let e=await window.api.get(c);d(e)})}function api_call_map$$module$api_shim(a){return new Promise(async b=>{let c=JSON.parse(await window.api.map());b(c)})}function api_call_dungeon$$module$api_shim(a,b){return new Promise(async c=>{let d=JSON.parse(await window.api.dungeon(b));c(d)})}
 function api_call_hazards$$module$api_shim(a,b){return new Promise(async c=>{let d=JSON.parse(await window.api.hazards(b));c(d)})}function api_call_city$$module$api_shim(a,b){return new Promise(async c=>{let d=JSON.parse(await window.api.city(b));c(d)})}function api_call_version$$module$api_shim(a){return new Promise(async b=>{b({})})}function api_call_search$$module$api_shim(a,b){return new Promise(async c=>{let d={};d.results=await window.api.search(b);c(d)})}var module$api_shim={};
-module$api_shim.api_call_city=api_call_city$$module$api_shim;module$api_shim.api_call_dungeon=api_call_dungeon$$module$api_shim;module$api_shim.api_call_hazards=api_call_hazards$$module$api_shim;module$api_shim.api_call_html=api_call_html$$module$api_shim;module$api_shim.api_call_map=api_call_map$$module$api_shim;module$api_shim.api_call_search=api_call_search$$module$api_shim;module$api_shim.api_call_version=api_call_version$$module$api_shim;module$api_shim.is_electron=is_electron$$module$api_shim;const BUILD_ID$$module$version="2403120848";var module$version={};module$version.BUILD_ID=BUILD_ID$$module$version;const html$$module$themes=$jscompDefaultExport$$module$libs$htm.bind(y$$module$libs$preact),DEFAULT_THEME$$module$themes={svg:is_electron$$module$api_shim?"hexroll-default-theme.svg?"+BUILD_ID$$module$version:"/hexroll-default-theme.svg?"+BUILD_ID$$module$version,no_rims:!0,borderline_zoom_factor:1E3,river_edge_color:"#1166aa",river_flow_color:"#3399cc",river_main_color:"#1166aa",trail_color:"#22222255",ocean_fill:"#049",ocean_stroke:"#25a",generate_thumbnail_scale:5,svg_style:html$$module$themes`
+module$api_shim.api_call_city=api_call_city$$module$api_shim;module$api_shim.api_call_dungeon=api_call_dungeon$$module$api_shim;module$api_shim.api_call_hazards=api_call_hazards$$module$api_shim;module$api_shim.api_call_html=api_call_html$$module$api_shim;module$api_shim.api_call_map=api_call_map$$module$api_shim;module$api_shim.api_call_search=api_call_search$$module$api_shim;module$api_shim.api_call_version=api_call_version$$module$api_shim;module$api_shim.is_electron=is_electron$$module$api_shim;const BUILD_ID$$module$version="2404070923";var module$version={};module$version.BUILD_ID=BUILD_ID$$module$version;const html$$module$themes=$jscompDefaultExport$$module$libs$htm.bind(y$$module$libs$preact),DEFAULT_THEME$$module$themes={svg:is_electron$$module$api_shim?"hexroll-default-theme.svg?"+BUILD_ID$$module$version:"/hexroll-default-theme.svg?"+BUILD_ID$$module$version,no_rims:!0,rims_for_rivers:!1,borderline_zoom_factor:1E3,river_edge_color:"#1166aa",river_flow_color:"#3399cc",river_main_color:"#1166aa",trail_color:"#22222255",ocean_fill:"#049",ocean_stroke:"#25a",generate_thumbnail_scale:5,svg_style:html$$module$themes`
     <style>
       svg#canvas {
         background-color: #004499;
@@ -1260,7 +1260,12 @@ module$api_shim.api_call_city=api_call_city$$module$api_shim;module$api_shim.api
         fill: #667722;
         fill: #8c8e36;
       }
-
+      .cc-label {
+        font-family: 'Oswald';
+        font-size: 0.1em;
+        fill: #222;
+        text-anchor: middle;
+      }
       .hex-label {
         font-family: 'Lakki Reddy';
         font-weight: bolder;
@@ -1295,7 +1300,7 @@ module$api_shim.api_call_city=api_call_city$$module$api_shim;module$api_shim.api
         stroke-linejoin: bevel;
       }
     </style>
-  `},PENZILLA_THEME$$module$themes={svg:is_electron$$module$api_shim?"hexroll-penzilla-theme.svg?"+BUILD_ID$$module$version:"/hexroll-penzilla-theme.svg?"+BUILD_ID$$module$version,no_rims:!1,borderline_zoom_factor:20,river_edge_color:"#33ccff",river_flow_color:"#88eeff",river_main_color:"#11aaff",trail_color:"#22000099",ocean_fill:"#09f",ocean_stroke:"#3bf",generate_thumbnail_scale:4,svg_style:html$$module$themes`
+  `},PENZILLA_THEME$$module$themes={svg:is_electron$$module$api_shim?"hexroll-penzilla-theme.svg?"+BUILD_ID$$module$version:"/hexroll-penzilla-theme.svg?"+BUILD_ID$$module$version,no_rims:!1,rims_for_rivers:!1,borderline_zoom_factor:20,river_edge_color:"#33ccff",river_flow_color:"#88eeff",river_main_color:"#11aaff",trail_color:"#22000099",ocean_fill:"#09f",ocean_stroke:"#3bf",generate_thumbnail_scale:4,svg_style:html$$module$themes`
     <style>
       svg#canvas {
         background-color: #0099ff;
@@ -1315,6 +1320,12 @@ module$api_shim.api_call_city=api_call_city$$module$api_shim;module$api_shim.api
         fill: #c8cc1e;
       }
 
+      .cc-label {
+        font-family: 'Oswald';
+        font-size: 0.1em;
+        text-anchor: middle;
+        fill: #fff;
+      }
       .hex-label {
         font-family: 'Lakki Reddy';
         paint-order: stroke;
@@ -1346,7 +1357,64 @@ module$api_shim.api_call_city=api_call_city$$module$api_shim;module$api_shim.api
         stroke-linejoin: bevel;
       }
     </style>
-  `},THEMES$$module$themes={default:DEFAULT_THEME$$module$themes,penzilla:PENZILLA_THEME$$module$themes};function getThemeByIndex$$module$themes(a){a=a||window.app.theme_index;const b=Object.keys(THEMES$$module$themes);return a>=b.length?THEMES$$module$themes.default:THEMES$$module$themes[b[a]]}
+  `},ANDREW_THEME$$module$themes={svg:is_electron$$module$api_shim?"hexroll-asheppard-theme.svg?"+BUILD_ID$$module$version:"/hexroll-asheppard-theme.svg?"+BUILD_ID$$module$version,no_rims:!1,rims_for_rivers:!0,borderline_zoom_factor:20,river_edge_color:"#78c8b6",river_flow_color:"#b2dec4",river_main_color:"#78c8b6",trail_color:"#00000099",ocean_fill:"#31899d",ocean_stroke:"#245f6d",generate_thumbnail_scale:4,svg_style:html$$module$themes`
+    <style>
+      svg#canvas {
+        background-color: #31899d;
+      }
+      polygon.underwear {
+        fill: #c8cc1e;
+      }
+
+      polygon.underwear-fow {
+        fill: #171910;
+      }
+
+      polygon.continent {
+        color: #ff0000;
+        stroke: #ff0000;
+        stroke-width: 2;
+        fill: #c8cc1e;
+      }
+
+      .cc-label {
+        font-family: 'Oswald';
+        font-size: 0.1em;
+        text-anchor: middle;
+        fill: #fff;
+      }
+      .hex-label {
+        font-family: 'Lakki Reddy';
+        paint-order: stroke;
+        pointer-events: none;
+        fill: #fbf5c4;
+        stroke: #4a4d40;
+        stroke-width: 0.5px;
+        stroke-linecap: round;
+        stroke-linejoin: bevel;
+      }
+      .region-label {
+        font-family: 'Lakki Reddy';
+        paint-order: stroke;
+        pointer-events: none;
+        fill: #fbf5c4;
+        stroke: #4a4d40;
+        stroke-width: 1px;
+        stroke-linecap: round;
+        stroke-linejoin: bevel;
+      }
+      .realm-label {
+        font-family: 'Lakki Reddy';
+        paint-order: stroke;
+        pointer-events: none;
+        fill: #fbf5c4;
+        stroke: #4a4d40;
+        stroke-width: 0.2em;
+        stroke-linecap: round;
+        stroke-linejoin: bevel;
+      }
+    </style>
+  `},THEMES$$module$themes={default:DEFAULT_THEME$$module$themes,penzilla:PENZILLA_THEME$$module$themes,andrew:ANDREW_THEME$$module$themes};function getThemeByIndex$$module$themes(a){a=a||window.app.theme_index;const b=Object.keys(THEMES$$module$themes);return a>=b.length?THEMES$$module$themes.default:THEMES$$module$themes[b[a]]}
 function nextTheme$$module$themes(){let a=window.app.theme_index+1;const b=Object.keys(THEMES$$module$themes);window.app.theme_index=a>=b.length?0:a;window.app.theme=getThemeByIndex$$module$themes(window.app.theme_index)}var module$themes={};module$themes.THEMES=THEMES$$module$themes;module$themes.getThemeByIndex=getThemeByIndex$$module$themes;module$themes.nextTheme=nextTheme$$module$themes;function saveState$$module$state(a,b){is_electron$$module$api_shim||window.app.map&&window.app.map.state.ephemeral||!window.app.vtt_referee||(window.app.save_state_timeout&&window.clearTimeout(window.app.save_state_timeout),window.app.save_state_timeout=window.setTimeout(()=>{fetch("/state/"+a+"/default",{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify({state:{theme_index:window.app.theme_index,show_labels:window.app.map.state.show_labels,show_dice_bar:window.app.map.state.show_dice_bar,
 desaturate_palette:window.app.map.state.desaturate_palette,spoilers_on:window.app.map.state.spoilers_on,vtt:window.app.doc_test()}})}).then(c=>c.json()).catch(c=>{console.error("Error:",c)});window.app.save_state_timeout=null},1E3))}
 function restoreState$$module$state(a,b,c){is_electron$$module$api_shim||window.app.map&&window.app.map.state.ephemeral||fetch("/state/"+a+"/default",{method:"GET"}).then(d=>d.json()).then(d=>{d.state&&(window.app.theme_index=d.state.theme_index,window.app.theme=getThemeByIndex$$module$themes(),window.app.vtt_referee&&window.app.apply_doc_update(Uint8Array.from(d.state.vtt)),c(d))}).catch(d=>{console.error("Error:",d)})}var module$state={};module$state.restoreState=restoreState$$module$state;
@@ -6462,6 +6530,17 @@ this.props.ox+this.props.dimw+20||b[1]>this.props.oy+this.props.dimh+20)){this.t
           transform="${this.t_poly}"
         />
         ${c}${e}${n}
+        ${a.show_hex_numbers&&html$$module$hex`
+          <text
+            dy="-5"
+            class="cc-label"
+            opacity="${a.hex_numbers_opacity}"
+            transform="${this.t_poly}"
+            font-size="0.1em"
+          >
+            ${a.cc}
+          </text>
+        `}
       </a>
       ${t}${w}${b}`}}}
 class BaseHexMask$$module$hex extends k$$module$libs$preact{getOffset(a=0,b=0){return getOffset$$module$hex(this.props.nx,this.props.ny,a,b)}getTranslation(a){return"translate("+a[0].toString()+", "+a[1].toString()+")"}clicked(a){a.preventDefault();if(window.app.inhibit_click)window.app.inhibit_click=!1;else if(a=this.props.uuid,this.props.flag_hotkey_mode)this.props.menuHandler.onHexClicked(this.props.nx,this.props.ny,this.props.uuid,this.props.type,this);else{var b=window.app.yarray.get(a)&&"partial"==
@@ -6509,18 +6588,19 @@ b){return this.populated_coords.has(canonical_coords$$module$utils(a,b))}isOccup
 b){if(this.populated_coords.has(canonical_coords$$module$utils(a,b)))return null;let c=null;for(let e=1;6>=e;e++){var d=this.neighbor({x:a,y:b},e);d=canonical_coords$$module$utils(d.x,d.y);if(this.populated_coords.has(d)){d=this.populated_coords.get(d);d=this.getHexDataByUUID(d);if(c&&c!=d.realm)return null;c||(c=d.realm)}}return c}getRegionOnCoast(a,b){if(this.populated_coords.has(canonical_coords$$module$utils(a,b)))return null;let c=[];for(let e=1;6>=e;e++){var d=this.neighbor({x:a,y:b},e);d=canonical_coords$$module$utils(d.x,
 d.y);this.populated_coords.has(d)&&(d=this.populated_coords.get(d),d=this.getHexDataByUUID(d),c.push([d.region,d.cls]))}return 0==c.length?null:c[Math.floor(Math.random()*c.length)]}addOceanHex(a,b){const c=canonical_coords$$module$utils(a,b);this.uuid_to_coords[c]={x:a,y:b,type:"",feature:""};return c}reload(a,b){return new Promise(c=>{window.app.map_cache&&!b&&(this.hexlist=window.app.map_cache.hexlist,this.borders=window.app.map_cache.borders,this.uuid_to_coords=window.app.map_cache.uuid_to_coords,
 this.populated_coords=window.app.map_cache.populated_coords,this.loaded=!0,this.postMapLoadedCallback&&this.postMapLoadedCallback(),c());this.reset();api_call_map$$module$api_shim(a).then(d=>{if(d&&d.map){this.regions=d.regions;var e=[],g=[];d.borders||(d.borders={});Object.keys(d.borders).forEach(w=>{const z=makeRealmPolygon$$module$api(d.borders[w]);e.push({uuid:w,wall:makeWall$$module$api(z),poly:z});g.push(makeRealmLabel$$module$api(w,d.realms[w],z))});d.map||(d.map=[]);var n=[];d.map.map(w=>
-{setupHexProps$$module$api(w);n.push({x:w.x,y:w.y});w.original_type=w.type;this.uuid_to_coords[w.uuid]={x:w.x,y:w.y,cls:w.cls,type:w.type,partial_type:w.partial_type,feature:w.feature,feature_uuid:w.feature_uuid,rotation:w.river_dir?w.river_dir:w.harbor?60*w.harbor:0,harbor:w.harbor,borderline:w.borderline,region:w.region,realm:w.realm};this.populated_coords.set(canonical_coords$$module$utils(w.x,w.y),w.uuid)});var t=get_centroidic_point$$module$utils(n)||{x:0,y:0};t=getOffset$$module$hex(t.x,t.y);
-this.hexlist=d.map;this.apply_theme_effects();this.borders=e;this.initial_offset={x:t[0],y:t[1]};this.realm_labels=g;this.postMapLoadedCallback&&this.postMapLoadedCallback();window.app.map_cache={hexlist:d.map,borders:e,realm_labels:g,uuid_to_coords:this.uuid_to_coords,populated_coords:this.populated_coords};c(!0)}else c(!1)})})}apply_theme_effects(){this.hexlist&&this.hexlist.map(a=>{a.type=window.app.theme.no_rims?a.original_type:this.isInner(a)||"ocean"===a.type?a.original_type:a.feature&&"Other"!==
-a.feature?a.original_type:"rim-"+a.partial_type})}}var module$api={};module$api.MapData=MapData$$module$api;module$api.RiverLine=RiverLine$$module$api;const html$$module$hexmap=$jscompDefaultExport$$module$libs$htm.bind(y$$module$libs$preact);function Underwear$$module$hexmap(a){return html$$module$hexmap` <g
+{setupHexProps$$module$api(w);n.push({x:w.x,y:w.y});w.original_type=w.type;w.cc=canonical_coords$$module$utils(w.x,w.y)||"BASE";this.uuid_to_coords[w.uuid]={x:w.x,y:w.y,cls:w.cls,type:w.type,partial_type:w.partial_type,feature:w.feature,feature_uuid:w.feature_uuid,rotation:w.river_dir?w.river_dir:w.harbor?60*w.harbor:0,harbor:w.harbor,borderline:w.borderline,region:w.region,realm:w.realm};this.populated_coords.set(canonical_coords$$module$utils(w.x,w.y),w.uuid)});var t=get_centroidic_point$$module$utils(n)||
+{x:0,y:0};t=getOffset$$module$hex(t.x,t.y);this.hexlist=d.map;this.apply_theme_effects();this.borders=e;this.initial_offset={x:t[0],y:t[1]};this.realm_labels=g;this.postMapLoadedCallback&&this.postMapLoadedCallback();window.app.map_cache={hexlist:d.map,borders:e,realm_labels:g,uuid_to_coords:this.uuid_to_coords,populated_coords:this.populated_coords};c(!0)}else c(!1)})})}apply_theme_effects(){this.hexlist&&this.hexlist.map(a=>{a.type=window.app.theme.no_rims?a.original_type:!this.isInner(a)&&"ocean"!==
+a.type||a.rivers&&window.app.theme.rims_for_rivers&&("ForestHex"==a.cls||"JungleHex"==a.cls)?a.feature&&"Other"!==a.feature?a.original_type:"rim-"+a.partial_type:a.original_type})}}var module$api={};module$api.MapData=MapData$$module$api;module$api.RiverLine=RiverLine$$module$api;const html$$module$hexmap=$jscompDefaultExport$$module$libs$htm.bind(y$$module$libs$preact);function Underwear$$module$hexmap(a){return html$$module$hexmap` <g
     ><polygon
       class="${a.fow?"underwear-fow":"underwear"}"
       points="${a.borders}"
     />
   </g>`}
 class VttHexMap$$module$hexmap extends SvgMap$$module$SvgMap{constructor(){super();this.map_data=new MapData$$module$api;this.setState({offset:{x:0,y:0},dim:{w:1500,h:1500},col1:"col1",res:"empty-",hexlist:[],sea:[],flags:[],spinner:!1});this.loaded=!1}fillOceanHexes(a,b,c,d){let e=[];const g=getHexCoords$$module$hex(a,b);a=getHexCoords$$module$hex(a+c,b+d);for(b=g[0]-2;b<a[0]+1;b++)for(c=g[1];c<a[1]+2;c++){d="ocean:"+b+","+c;const n=window.app.yarray.get(d);n&&""!=n&&e.push({x:b,y:c,type:"ocean",uuid:d})}return e}navigateToHex(a,
-b){}sort_hexlist(a){a.sort(function(b,c){return b.y>c.y?-1:b.y<c.y?1:0});return a}getMatrix(a){this.props.spinner(1,!0);this.map_data.reload(this.props.instance,a).then(b=>{b?(this.updateReveals(this.map_data.hexlist),this.setState({hexlist:this.sort_hexlist(this.map_data.hexlist),offset:this.loaded?this.state.offset:{x:this.map_data.initial_offset.x-this.state.dim.w/2,y:this.map_data.initial_offset.y-this.state.dim.h/2}}),this.loaded=!0):this.forceUpdate();this.setState({spinner:!1});this.props.spinner(1,
-!1)})}onHexClicked(a,b,c,d,e){}updateReveals(a){for(let b=0;b<a.length;b++){const c=window.app.yarray.get(a[b].uuid);a[b].pod=c&&"partial"==c[0]?a[b].partial_type:a[b].type;a[b].revealed=c&&c[0]}this.setState({hexlist:a})}postMapLoaded(a){this.loaded?a():this.postMapLoadedCallback=a}componentDidMount(a,b,c){this.postMapLoadedCallback=this.updateReveals;this.getMatrix();super.componentDidMount(a,b,c);window.app.yarray.observe(this.yarr_observer=d=>{d.keysChanged.has("flags")?(this.setState({flags:window.app.yarray.get("flags")}),
-this.updateReveals(this.state.hexlist)):d.keysChanged.has("map")?this.getMatrix(!0):this.updateReveals(this.state.hexlist)})}is_within_frustrum(a,b=40){return a.x>this.state.offset.x-b||a.y>this.state.offset.y-b||a.x<this.state.offset.x+this.state.dim.w+b||a.y<this.state.offset.y+this.state.dim.h+b}hexBitmask(){return 0}render(a,b){const c=this.fillOceanHexes(b.offset.x,b.offset.y,b.dim.w,b.dim.h);return html$$module$hexmap`<div
+b){a=this.map_data.getHexDataByUUID(a);if(void 0!==a){var c=getOffset$$module$hex(a.x,a.y),d=b?b.zoom:100,e=b?b.zoom:100;b=window.app.zooming_into_entity?500:0;window.app.zooming_into_entity=!1;window.setTimeout(()=>{this.minimapOnLocation(c[0],c[1],d,e)},b)}}sort_hexlist(a){a.sort(function(b,c){return b.y>c.y?-1:b.y<c.y?1:0});return a}getMatrix(a){this.props.spinner(1,!0);this.map_data.reload(this.props.instance,a).then(b=>{b?(window.setTimeout(()=>{this.updateReveals(this.map_data.hexlist)},2E3),
+this.setState({hexlist:this.sort_hexlist(this.map_data.hexlist),offset:this.loaded?this.state.offset:{x:this.map_data.initial_offset.x-this.state.dim.w/2,y:this.map_data.initial_offset.y-this.state.dim.h/2}}),this.loaded=!0):this.forceUpdate();this.setState({spinner:!1});this.props.spinner(1,!1)})}onHexClicked(a,b,c,d,e){}updateReveals(a){for(let b=0;b<a.length;b++){const c=window.app.yarray.get(a[b].uuid);a[b].pod=c&&"partial"==c[0]?a[b].partial_type:a[b].type;a[b].revealed=c&&c[0]}this.setState({hexlist:a})}postMapLoaded(a){this.loaded?
+a():this.postMapLoadedCallback=a}componentDidMount(a,b,c){this.postMapLoadedCallback=this.updateReveals;this.getMatrix();super.componentDidMount(a,b,c);window.app.yarray.observe(this.yarr_observer=d=>{d.keysChanged.has("flags")?(this.setState({flags:window.app.yarray.get("flags")}),this.updateReveals(this.state.hexlist)):d.keysChanged.has("jumper")?this.navigateToHex(window.app.yarray.get("jumper")):d.keysChanged.has("map")?this.getMatrix(!0):this.updateReveals(this.state.hexlist)})}is_within_frustrum(a,
+b=40){return a.x>this.state.offset.x-b||a.y>this.state.offset.y-b||a.x<this.state.offset.x+this.state.dim.w+b||a.y<this.state.offset.y+this.state.dim.h+b}hexBitmask(){return 0}render(a,b){const c=this.fillOceanHexes(b.offset.x,b.offset.y,b.dim.w,b.dim.h);return html$$module$hexmap`<div
       id="hexmap"
       class="${"col1"}"
       style="overflow:hidden;${a.visible?"":"display:none;"}"
@@ -6616,18 +6696,18 @@ a;var t=b?b.zoom:100,w=b?b.zoom:100;b=window.app.zooming_into_entity?500:0;windo
 c.json()).then(c=>{b()}).catch(c=>{console.error("Error:",c)})})}onRemoveEntity(a){this.onRemoveEntityInner(a).then(()=>{delete window.app.map_cache;this.getMatrix(!0)})}onRemoveHex(a){this.onRemoveEntity(a)}onRemoveRegion(a){this.onRemoveEntity(this.map_data.hexRegion(a))}onRemoveRealm(a){this.onRemoveEntity(this.map_data.hexRealm(a))}componentDidMount(a,b,c){this.getMatrix();super.componentDidMount(a,b,c);window.addEventListener("keydown",d=>this.onKeyDown(d));window.addEventListener("keyup",d=>
 this.onKeyUp(d));window.addEventListener("mouseout",d=>{d=d.relatedTarget||d.toElement;d&&"HTML"!=d.nodeName||(this.setState({hotkey_mode:!1,flag_hotkey_mode:!1}),window.app.hotkey_mode=!1,window.app.flag_hotkey_mode=!1,this.props.hotkeyMode(!1))})}onKeyUp(a){window.app.inhibit_hotkeys||this.props.editMode||is_electron$$module$api_shim||("Space"==a.code&&window.app.hotkey_mode&&this.props.hotkeyMode(!1),"KeyF"==a.code&&window.app.flag_hotkey_mode&&(this.props.hotkeyMode(!1,{flag_hotkey_mode:!1,flags:[]}),
 window.app.yarray.set("flags",[]),window.app.flag_hotkey_mode=!1),"KeyT"==a.code&&(window.app.token_hotkey_mode=!1,this.props.hotkeyMode(!1)),"KeyK"==a.code&&(window.app.kill_hotkey_mode=!1,this.props.hotkeyMode(!1)),"KeyH"==a.code&&(this.menu_hotkey_type=0),"KeyC"==a.code&&(this.menu_hotkey_type=0))}onKeyDown(a){if(!window.app.inhibit_hotkeys&&!this.props.editMode&&(is_electron$$module$api_shim||("Space"!=a.code||window.app.hotkey_mode||(this.setState({hotkey_mode:!0}),this.props.hotkeyMode(!0),
-window.app.hotkey_mode=!0),"KeyF"!=a.code||window.app.flag_hotkey_mode||(this.props.hotkeyMode(!0,{flag_hotkey_mode:!0}),window.app.flag_hotkey_mode=!0),"KeyT"!=a.code||window.app.token_hotkey_mode||(window.app.token_hotkey_mode=!0,this.props.hotkeyMode(!0)),"KeyK"!=a.code||window.app.kill_hotkey_mode||(window.app.kill_hotkey_mode=!0,this.props.hotkeyMode(!0)),"KeyL"==a.code&&this.props.toggleLabels()),this.focused_hex&&this.props.hex_uuid)){var b=this.focused_hex.y,c=this.focused_hex.x;"w"==a.key&&
-(b-=2);"s"==a.key&&(b+=2);"e"!=a.key||a.ctrlKey||(--b,0==Math.abs(b)%2&&c++);"q"==a.key&&(--b,1==Math.abs(b)%2&&c--);"a"==a.key&&(b+=1,1==Math.abs(b)%2&&c--);"d"==a.key&&(b+=1,0==Math.abs(b)%2&&c++);if(b!=this.focused_hex.y||c!=this.focused_hex.x){var d=this.map_data.populated_coords.get(canonical_coords$$module$utils(c,b)),e=d?null:this.map_data.addOceanHex(c,b);if(d||e)this.navigateToHex(d),this.on_key_down_to&&window.clearTimeout(this.on_key_down_to);this.on_key_down_to=window.setTimeout(()=>{$$$module$libs$preact_router_module("/sandbox/"+
-this.props.instance+(e?"/coords/":"/hex/")+(e?e:d))},500)}}}componentDidUpdate(a,b,c){this.show_region_label="region"===this.props.type?this.props.hex_uuid:!1;this.show_realm_label="realm"===this.props.type?this.props.hex_uuid:!1;this.onSelectHexInoked&&(this.onSelectHexInoked=!1);0==a.locked&&1==this.props.locked&&(this.selected=null)}is_within_frustrum(a,b=40){return a.x>this.state.offset.x-b||a.y>this.state.offset.y-b||a.x<this.state.offset.x+this.state.dim.w+b||a.y<this.state.offset.y+this.state.dim.h+
-b}hexBitmask(){const a=this.state.menu.uuid;let b=0;"ocean"===this.state.menu.hex_type&&(b|=HexBitmask$$module$hexmenu.IS_HEX_AN_OCEAN);this.map_data.isOccupied(a)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_OCCUPIED);this.map_data.isCoastal(a)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_COASTAL);this.map_data.isRiverSource(a)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_VALID_RIVER_SOURCE);this.map_data.isBorderline(a)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_HAS_BORDER);this.map_data.getRealmOnCoast(this.state.menu.nx,
-this.state.menu.ny)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_EXTENDING_REALM);this.map_data.getRegionOnCoast(this.state.menu.nx,this.state.menu.ny)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_EXTENDING_REGION);return b}render(a,b){var c=this.focused_hex?getOffset$$module$hex(this.focused_hex.x,this.focused_hex.y,0,0):null;c=this.focused_hex?html$$module$hexmap` <polygon class="focused-hex" points=${makeHex$$module$hex(c)} /> `:html$$module$hexmap``;var d=1<b.zoom_factor&&1500>b.zoom_factor&&!a.locked&&!b.spinner;
-d||(this.selected=!1);var e=5/Math.sqrt(b.zoom_factor);d=this.state.menu?html$$module$hexmap`<${HexMenu$$module$hexmenu}
+window.app.hotkey_mode=!0),"KeyF"!=a.code||window.app.flag_hotkey_mode||(this.props.hotkeyMode(!0,{flag_hotkey_mode:!0}),window.app.flag_hotkey_mode=!0),"KeyT"!=a.code||window.app.token_hotkey_mode||(window.app.token_hotkey_mode=!0,this.props.hotkeyMode(!0)),"KeyK"!=a.code||window.app.kill_hotkey_mode||(window.app.kill_hotkey_mode=!0,this.props.hotkeyMode(!0)),"KeyL"==a.code&&this.props.toggleLabels(),"KeyJ"==a.code&&window.app.yarray.set("jumper",this.props.hex_uuid)),this.focused_hex&&this.props.hex_uuid)){var b=
+this.focused_hex.y,c=this.focused_hex.x;"w"==a.key&&(b-=2);"s"==a.key&&(b+=2);"e"!=a.key||a.ctrlKey||(--b,0==Math.abs(b)%2&&c++);"q"==a.key&&(--b,1==Math.abs(b)%2&&c--);"a"==a.key&&(b+=1,1==Math.abs(b)%2&&c--);"d"==a.key&&(b+=1,0==Math.abs(b)%2&&c++);if(b!=this.focused_hex.y||c!=this.focused_hex.x){var d=this.map_data.populated_coords.get(canonical_coords$$module$utils(c,b)),e=d?null:this.map_data.addOceanHex(c,b);if(d||e)this.navigateToHex(d),this.on_key_down_to&&window.clearTimeout(this.on_key_down_to);
+this.on_key_down_to=window.setTimeout(()=>{$$$module$libs$preact_router_module("/sandbox/"+this.props.instance+(e?"/coords/":"/hex/")+(e?e:d))},500)}}}componentDidUpdate(a,b,c){this.show_region_label="region"===this.props.type?this.props.hex_uuid:!1;this.show_realm_label="realm"===this.props.type?this.props.hex_uuid:!1;this.onSelectHexInoked&&(this.onSelectHexInoked=!1);0==a.locked&&1==this.props.locked&&(this.selected=null)}is_within_frustrum(a,b=40){return a.x>this.state.offset.x-b||a.y>this.state.offset.y-
+b||a.x<this.state.offset.x+this.state.dim.w+b||a.y<this.state.offset.y+this.state.dim.h+b}hexBitmask(){const a=this.state.menu.uuid;let b=0;"ocean"===this.state.menu.hex_type&&(b|=HexBitmask$$module$hexmenu.IS_HEX_AN_OCEAN);this.map_data.isOccupied(a)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_OCCUPIED);this.map_data.isCoastal(a)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_COASTAL);this.map_data.isRiverSource(a)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_VALID_RIVER_SOURCE);this.map_data.isBorderline(a)&&(b|=
+HexBitmask$$module$hexmenu.IS_HEX_HAS_BORDER);this.map_data.getRealmOnCoast(this.state.menu.nx,this.state.menu.ny)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_EXTENDING_REALM);this.map_data.getRegionOnCoast(this.state.menu.nx,this.state.menu.ny)&&(b|=HexBitmask$$module$hexmenu.IS_HEX_EXTENDING_REGION);return b}calc_hex_numbers_opacity(){let a=0,b=1,c=(this.state.zoom_factor-3)/10;100<this.state.zoom_factor&&(a=1,c=this.state.zoom_factor/1E3,b=-1);return a+b*clamp$$module$utils(c,0,1)}render(a,b){var c=
+this.focused_hex?getOffset$$module$hex(this.focused_hex.x,this.focused_hex.y,0,0):null;c=this.focused_hex?html$$module$hexmap` <polygon class="focused-hex" points=${makeHex$$module$hex(c)} /> `:html$$module$hexmap``;var d=1<b.zoom_factor&&1500>b.zoom_factor&&!a.locked&&!b.spinner;d||(this.selected=!1);var e=5/Math.sqrt(b.zoom_factor);d=this.state.menu?html$$module$hexmap`<${HexMenu$$module$hexmenu}
           menu=${this.state.menu}
           cond=${d}
           bitmask=${this.hexBitmask()}
           handler=${this}
           scale=${Math.min(Math.max(1.5*e,.5),3)}
-        />`:html$$module$hexmap``;this.fillOceanHexes(b.offset.x,b.offset.y,b.dim.w,b.dim.h);e=this.state.col1;e=a.hex_uuid?"rect1":"col1";const g=b.hotkey_mode?SeaHexMask$$module$hex:SeaHex$$module$hex;return html$$module$hexmap`<div
+        />`:html$$module$hexmap``;this.fillOceanHexes(b.offset.x,b.offset.y,b.dim.w,b.dim.h);e=this.state.col1;e=a.hex_uuid?"rect1":"col1";const g=b.hotkey_mode?SeaHexMask$$module$hex:SeaHex$$module$hex,n=a.show_labels&2,t=this.calc_hex_numbers_opacity();return html$$module$hexmap`<div
       id="hexmap"
       class="${e}"
       style="overflow:hidden;${a.visible?"":"display:none;"}"
@@ -6642,15 +6722,15 @@ d||(this.selected=!1);var e=5/Math.sqrt(b.zoom_factor);d=this.state.menu?html$$m
         <g id="viewport">
           <g class="pod-wrap">
             <g opacity="${this.state.zoom_factor/4}">
-              ${this.sea.map(n=>html$$module$hexmap`<${g}
-                  id=${n.uuid}
+              ${this.sea.map(w=>html$$module$hexmap`<${g}
+                  id=${w.uuid}
                   res="${b.res}"
-                  type="${n.type}"
+                  type="${w.type}"
                   class="base"
-                  uuid="${n.uuid}"
+                  uuid="${w.uuid}"
                   instance=${a.instance}
-                  nx="${n.x}"
-                  ny="${n.y}"
+                  nx="${w.x}"
+                  ny="${w.y}"
                   ox="${b.offset.x}"
                   oy="${b.offset.y}"
                   dimw="${b.dim.w}"
@@ -6661,24 +6741,25 @@ d||(this.selected=!1);var e=5/Math.sqrt(b.zoom_factor);d=this.state.menu?html$$m
                 />`)}
             </g>
             <g>
-              ${b.borders.map(n=>html$$module$hexmap` <${Underwear$$module$hexmap}
+              ${b.borders.map(w=>html$$module$hexmap` <${Underwear$$module$hexmap}
                   fow=${b.hotkey_mode}
-                  borders="${n.wall}"
+                  borders="${w.wall}"
                 />`)}
             </g>
-            ${b.hexlist.map(n=>html$$module$hexmap`<${Hex$$module$hex}
+            ${b.hexlist.map(w=>html$$module$hexmap`<${Hex$$module$hex}
                 res="${b.res}"
-                type="${n.type}"
-                feature="${n.feature}"
-                feature_uuid="${n.feature_uuid}"
+                type="${w.type}"
+                feature="${w.feature}"
+                feature_uuid="${w.feature_uuid}"
                 class="base"
                 instance="${a.instance}"
-                uuid=${n.uuid}
-                riverline=${n.riverline}
-                trailslines=${n.trailslines}
+                uuid=${w.uuid}
+                riverline=${w.riverline}
+                trailslines=${w.trailslines}
                 location_uuid=${a.hex_uuid}
-                nx="${n.x}"
-                ny="${n.y}"
+                nx="${w.x}"
+                ny="${w.y}"
+                cc="${w.cc}"
                 zoom_factor=${b.zoom_factor}
                 ox="${b.offset.x}"
                 oy="${b.offset.y}"
@@ -6688,12 +6769,14 @@ d||(this.selected=!1);var e=5/Math.sqrt(b.zoom_factor);d=this.state.menu?html$$m
                 tokens=${this.tokens}
                 hotkey_mode=${b.hotkey_mode}
                 show_labels=${a.show_labels}
+                show_hex_numbers=${n}
+                hex_numbers_opacity=${t}
               />`)}
-            ${b.hotkey_mode&&1E3>b.zoom_factor&&b.hexlist.map(n=>html$$module$hexmap`<${HexMask$$module$hex}
-                uuid=${n.uuid}
+            ${b.hotkey_mode&&1E3>b.zoom_factor&&b.hexlist.map(w=>html$$module$hexmap`<${HexMask$$module$hex}
+                uuid=${w.uuid}
                 instance=${a.instance}
-                nx="${n.x}"
-                ny="${n.y}"
+                nx="${w.x}"
+                ny="${w.y}"
                 zoom_factor=${b.zoom_factor}
                 ox="${b.offset.x}"
                 oy="${b.offset.y}"
@@ -6702,9 +6785,9 @@ d||(this.selected=!1);var e=5/Math.sqrt(b.zoom_factor);d=this.state.menu?html$$m
                 flag_hotkey_mode=${b.flag_hotkey_mode}
               />`)}
             <g>
-              ${b.zoom_factor<window.app.theme.borderline_zoom_factor&&b.borders.map(n=>html$$module$hexmap`<a onClick=${()=>this.onClickRealm(n.uuid)}>
+              ${b.zoom_factor<window.app.theme.borderline_zoom_factor&&b.borders.map(w=>html$$module$hexmap`<a onClick=${()=>this.onClickRealm(w.uuid)}>
                   <${Borderline$$module$hex}
-                    borders="${n.wall}"
+                    borders="${w.wall}"
                     arm="10"
                     color="#ffffff"
                     zoom_factor=${b.zoom_factor}
@@ -6716,46 +6799,46 @@ d||(this.selected=!1);var e=5/Math.sqrt(b.zoom_factor);d=this.state.menu?html$$m
             </g>
             <g>${c}</g>
             <g>
-              ${b.flags.map(n=>html$$module$hexmap`<polygon
+              ${b.flags.map(w=>html$$module$hexmap`<polygon
                   class="flagged-hex"
-                  points=${makeHex$$module$hex(getOffset$$module$hex(n.x,n.y))}
+                  points=${makeHex$$module$hex(getOffset$$module$hex(w.x,w.y))}
                 />`)}
             </g>
             <g>
-              ${"col1"==e&&a.show_labels%2&&!b.hotkey_mode?this.hexlabels.map(n=>{if(this.is_within_frustrum(n))return html$$module$hexmap`
+              ${"col1"==e&&a.show_labels%2&&!b.hotkey_mode?this.hexlabels.map(w=>{if(this.is_within_frustrum(w))return html$$module$hexmap`
                         <${InMapLabel$$module$hexmap}
                           zoom_factor=${this.state.zoom_factor}
                           zoom_threshold="300"
-                          label_opacity_factor=${(this.state.zoom_factor-80)/160}
-                          l=${n}
+                          label_opacity_factor=${(this.state.zoom_factor-10)/20}
+                          l=${w}
                           label_class="hex-label"
                           yoffset="2.5em"
                         />
                       `}):html$$module$hexmap``}
             </g>
             <g>
-              ${"col1"==e&&a.show_labels%2&&!b.hotkey_mode||this.show_region_label?this.region_labels.map(n=>{if((!this.show_region_label||this.show_region_label==n.uuid)&&this.is_within_frustrum(n))return html$$module$hexmap`
+              ${"col1"==e&&a.show_labels%2&&!b.hotkey_mode||this.show_region_label?this.region_labels.map(w=>{if((!this.show_region_label||this.show_region_label==w.uuid)&&this.is_within_frustrum(w))return html$$module$hexmap`
                         <${InMapLabel$$module$hexmap}
                           zoom_factor=${this.state.zoom_factor}
                           zoom_threshold="50"
                           label_opacity_factor=${this.show_region_label?1:(this.state.zoom_factor-5)/10}
-                          l=${n}
+                          l=${w}
                           label_class="region-label"
                           yoffset="1em"
                         />
                       `}):html$$module$hexmap``}
             </g>
             <g>
-              ${"col1"==e&&a.show_labels%2&&!b.hotkey_mode&&!this.show_region_label||this.show_realm_label?this.state.realm_labels.map(n=>{if(!this.show_realm_label||this.show_realm_label==n[3])return html$$module$hexmap`
+              ${"col1"==e&&a.show_labels%2&&!b.hotkey_mode&&!this.show_region_label||this.show_realm_label?this.state.realm_labels.map(w=>{if(!this.show_realm_label||this.show_realm_label==w[3])return html$$module$hexmap`
                       <text
                         opacity="${1-clamp$$module$utils((this.state.zoom_factor-3)/10,0,1)}"
-                        transform="translate( ${n[1].x} , ${n[1].y})"
+                        transform="translate( ${w[1].x} , ${w[1].y})"
                         class="realm-label"
-                        font-size="${n[2]}em"
+                        font-size="${w[2]}em"
                         text-anchor="middle"
                       >
-                        ${n[0].map((t,w)=>html$$module$hexmap`<tspan x="0" y="${w-2}em" dy="1em"
-                            >${t}</tspan
+                        ${w[0].map((z,C)=>html$$module$hexmap`<tspan x="0" y="${C-2}em" dy="1em"
+                            >${z}</tspan
                           >`)}
                       </text>
                     `}):html$$module$hexmap``}
@@ -7043,45 +7126,45 @@ class SearchBar$$module$search extends k$$module$libs$preact{constructor(){super
       `}}var module$search={};module$search.SearchBar=SearchBar$$module$search;const html$$module$dialogs=$jscompDefaultExport$$module$libs$htm.bind(y$$module$libs$preact);
 class GenerateRealmDialog$$module$dialogs extends ModalDialog$$module$utils{constructor(){super();this.state={show:!0,compiler:0,realm_type:"RealmTypeKingdom",minimum_number_of_regions:6,maximum_number_of_regions:12,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,
 minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_jungle_region:12,maximum_tiles_per_jungle_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32,minimum_tiles_per_tundra_region:12,maximum_tiles_per_tundra_region:32,minimum_number_of_settlements:6,maximum_number_of_settlements:9,cities_probability:2,towns_probability:3,villages_probability:3,minimum_number_of_dwellings:7,
-maximum_number_of_dwellings:11,house_probability:1,stronghold_probability:1,minimum_number_of_inns:3,maximum_number_of_inns:6,minimum_number_of_dungeons:6,maximum_number_of_dungeons:9,tombs_probability:1,temples_probability:1,caves_probability:1,minimum_number_of_factions:3,maximum_number_of_factions:5,cults_probability:1,militias_probability:1,syndicates_probability:1,wandering_monsters_max_hd:4,scroll_mod:"",treasure_factor:1};this.onSubmit=this.onSubmit.bind(this);this.onRealmType=this.onRealmType.bind(this);
-this.onRealmPopulation=this.onRealmPopulation.bind(this);this.onMinimumNumberOfRegions=this.onMinimumNumberOfRegions.bind(this);this.onMaximumNumberOfRegions=this.onMaximumNumberOfRegions.bind(this);this.onMountainsProbability=this.onMountainsProbability.bind(this);this.onMinimumTilesPerMountainsRegion=this.onMinimumTilesPerMountainsRegion.bind(this);this.onMaximumTilesPerMountainsRegion=this.onMaximumTilesPerMountainsRegion.bind(this);this.onMinimumTilesPerForestRegion=this.onMinimumTilesPerForestRegion.bind(this);
-this.onMaximumTilesPerForestRegion=this.onMaximumTilesPerForestRegion.bind(this);this.onMinimumTilesPerDesertRegion=this.onMinimumTilesPerDesertRegion.bind(this);this.onMaximumTilesPerDesertRegion=this.onMaximumTilesPerDesertRegion.bind(this);this.onMinimumTilesPerPlainsRegion=this.onMinimumTilesPerPlainsRegion.bind(this);this.onMaximumTilesPerPlainsRegion=this.onMaximumTilesPerPlainsRegion.bind(this);this.onMinimumTilesPerJungleRegion=this.onMinimumTilesPerJungleRegion.bind(this);this.onMaximumTilesPerJungleRegion=
-this.onMaximumTilesPerJungleRegion.bind(this);this.onMinimumTilesPerSwampsRegion=this.onMinimumTilesPerSwampsRegion.bind(this);this.onMaximumTilesPerSwampsRegion=this.onMaximumTilesPerSwampsRegion.bind(this);this.onMinimumTilesPerTundraRegion=this.onMinimumTilesPerTundraRegion.bind(this);this.onMaximumTilesPerTundraRegion=this.onMaximumTilesPerTundraRegion.bind(this);this.onForestProbability=this.onForestProbability.bind(this);this.onDesertProbability=this.onDesertProbability.bind(this);this.onPlainsProbability=
-this.onPlainsProbability.bind(this);this.onJungleProbability=this.onJungleProbability.bind(this);this.onSwampsProbability=this.onSwampsProbability.bind(this);this.onTundraProbability=this.onTundraProbability.bind(this);this.onMinimumNumberOfSettlements=this.onMinimumNumberOfSettlements.bind(this);this.onMaximumNumberOfSettlements=this.onMaximumNumberOfSettlements.bind(this);this.onCitiesProbability=this.onCitiesProbability.bind(this);this.onTownsProbability=this.onTownsProbability.bind(this);this.onMinimumNumberOfDwellings=
-this.onMinimumNumberOfDwellings.bind(this);this.onMaximumNumberOfDwellings=this.onMaximumNumberOfDwellings.bind(this);this.onHouseProbability=this.onHouseProbability.bind(this);this.onStrongholdProbability=this.onStrongholdProbability.bind(this);this.onVillagesProbability=this.onVillagesProbability.bind(this);this.onMinimumNumberOfInns=this.onMinimumNumberOfInns.bind(this);this.onMaximumNumberOfInns=this.onMaximumNumberOfInns.bind(this);this.onMinimumNumberOfDungeons=this.onMinimumNumberOfDungeons.bind(this);
-this.onMaximumNumberOfDungeons=this.onMaximumNumberOfDungeons.bind(this);this.onTombsProbability=this.onTombsProbability.bind(this);this.onTemplesProbability=this.onTemplesProbability.bind(this);this.onCavesProbability=this.onCavesProbability.bind(this);this.onMinimumNumberOfFactions=this.onMinimumNumberOfFactions.bind(this);this.onMaximumNumberOfFactions=this.onMaximumNumberOfFactions.bind(this);this.onCultsProbability=this.onCultsProbability.bind(this);this.onMilitiasProbability=this.onMilitiasProbability.bind(this);
-this.onSyndicatesProbability=this.onSyndicatesProbability.bind(this);this.onWanderingMonstersMaxHD=this.onWanderingMonstersMaxHD.bind(this);this.onScrollMod=this.onScrollMod.bind(this);this.onTreasureFactor=this.onTreasureFactor.bind(this)}show(){this.setState({show:!0})}hide(){this.setState({show:!1})}onRealmType(a){"RealmTypeLands"==a.target.value&&this.setState({realm_type:"RealmTypeLands",minimum_number_of_regions:6,maximum_number_of_regions:12,mountains_probability:3,forest_probability:0,desert_probability:1,
-plains_probability:0,jungle_probability:4,swamps_probability:1,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_jungle_region:12,maximum_tiles_per_jungle_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeKingdom"==a.target.value&&this.setState({realm_type:"RealmTypeKingdom",minimum_number_of_regions:6,maximum_number_of_regions:12,
-mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});
-"RealmTypeEmpire"==a.target.value&&this.setState({realm_type:"RealmTypeEmpire",minimum_number_of_regions:24,maximum_number_of_regions:32,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,
-minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeDuchy"==a.target.value&&this.setState({realm_type:"RealmTypeDuchy",minimum_number_of_regions:4,maximum_number_of_regions:8,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,
-minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeIsland"==a.target.value&&this.setState({realm_type:"RealmTypeIsland",minimum_number_of_regions:3,maximum_number_of_regions:7,mountains_probability:3,forest_probability:0,desert_probability:1,plains_probability:0,
-jungle_probability:2,swamps_probability:0,tundra_probability:0,minimum_tiles_per_mountains_region:3,maximum_tiles_per_mountains_region:8,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:3,maximum_tiles_per_desert_region:8,minimum_tiles_per_jungle_region:3,maximum_tiles_per_jungle_region:8,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32,minimum_number_of_dungeons:1,
-maximum_number_of_dungeons:3,minimum_number_of_settlements:0,maximum_number_of_settlements:1,minimum_number_of_dwellings:2,maximum_number_of_dwellings:5,minimum_number_of_inns:0,maximum_number_of_inns:1,minimum_number_of_factions:0,maximum_number_of_factions:1,cities_probability:1,towns_probability:2,villages_probability:4})}onRealmPopulation(a){"now"==a.target.value&&this.setState({minimum_number_of_settlements:6,maximum_number_of_settlements:9,minimum_number_of_dwellings:7,maximum_number_of_dwellings:11,
-minimum_number_of_inns:6,maximum_number_of_inns:9,minimum_number_of_factions:3,maximum_number_of_factions:5});"later"==a.target.value&&this.setState({minimum_number_of_settlements:0,maximum_number_of_settlements:0,minimum_number_of_dwellings:0,maximum_number_of_dwellings:0,minimum_number_of_inns:0,maximum_number_of_inns:0,minimum_number_of_factions:0,maximum_number_of_factions:0})}preventLower(a,b){return parseInt(a)>parseInt(b)?a:b}onMinimumNumberOfRegions(a){this.state.maximum_number_of_regions<
-parseInt(a.target.value)&&(this.state.maximum_number_of_regions=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_regions=a.target.value}onMaximumNumberOfRegions(a){this.state.maximum_number_of_regions=this.preventLower(this.state.minimum_number_of_regions,a.target.value);this.forceUpdate()}onMountainsProbability(a){this.state.mountains_probability=a.target.value}onMinimumTilesPerMountainsRegion(a){this.state.maximum_tiles_per_mountains_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_mountains_region=
-parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_mountains_region=a.target.value}onMaximumTilesPerMountainsRegion(a){this.state.maximum_tiles_per_mountains_region=this.preventLower(this.state.minimum_tiles_per_mountains_region,a.target.value);this.forceUpdate()}onMinimumTilesPerForestRegion(a){this.state.maximum_tiles_per_forest_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_forest_region=parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_forest_region=
-a.target.value}onMaximumTilesPerForestRegion(a){this.state.maximum_tiles_per_forest_region=this.preventLower(this.state.minimum_tiles_per_forest_region,a.target.value);this.forceUpdate()}onMinimumTilesPerDesertRegion(a){this.state.maximum_tiles_per_desert_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_desert_region=parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_desert_region=a.target.value}onMaximumTilesPerDesertRegion(a){this.state.maximum_tiles_per_desert_region=
-this.preventLower(this.state.minimum_tiles_per_desert_region,a.target.value);this.forceUpdate()}onMinimumTilesPerPlainsRegion(a){this.state.maximum_tiles_per_plains_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_plains_region=parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_plains_region=a.target.value}onMaximumTilesPerPlainsRegion(a){this.state.maximum_tiles_per_plains_region=this.preventLower(this.state.minimum_tiles_per_plains_region,a.target.value);this.forceUpdate()}onMinimumTilesPerJungleRegion(a){this.state.maximum_tiles_per_jungle_region<
-parseInt(a.target.value)&&(this.state.maximum_tiles_per_jungle_region=parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_jungle_region=a.target.value}onMaximumTilesPerJungleRegion(a){this.state.maximum_tiles_per_jungle_region=this.preventLower(this.state.minimum_tiles_per_jungle_region,a.target.value);this.forceUpdate()}onMinimumTilesPerSwampsRegion(a){this.state.maximum_tiles_per_swamps_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_swamps_region=parseInt(a.target.value),
-this.forceUpdate());this.state.minimum_tiles_per_swamps_region=a.target.value}onMaximumTilesPerSwampsRegion(a){this.state.maximum_tiles_per_swamps_region=this.preventLower(this.state.minimum_tiles_per_swamps_region,a.target.value);this.forceUpdate()}onMinimumTilesPerTundraRegion(a){this.state.maximum_tiles_per_tundra_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_tundra_region=parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_tundra_region=a.target.value}onMaximumTilesPerTundraRegion(a){this.state.maximum_tiles_per_tundra_region=
-this.preventLower(this.state.minimum_tiles_per_tundra_region,a.target.value);this.forceUpdate()}preventAllBiomesProbabilitySetToZero(){return 0==parseInt(this.state.mountains_probability)&&0==parseInt(this.state.forest_probability)&&0==parseInt(this.state.desert_probability)&&0==parseInt(this.state.plains_probability)&&0==parseInt(this.state.jungle_probability)&&0==parseInt(this.state.swamps_probability)&&0==parseInt(this.state.tundra_probability)?!0:!1}onForestProbability(a){this.state.forest_probability=
-a.target.value;this.preventAllBiomesProbabilitySetToZero()&&(this.state.forest_probability=1,this.forceUpdate())}onDesertProbability(a){this.state.desert_probability=a.target.value;this.preventAllBiomesProbabilitySetToZero()&&(this.state.desert_probability=1,this.forceUpdate())}onPlainsProbability(a){this.state.plains_probability=a.target.value;this.preventAllBiomesProbabilitySetToZero()&&(this.state.plains_probability=1,this.forceUpdate())}onJungleProbability(a){this.state.jungle_probability=a.target.value;
-this.preventAllBiomesProbabilitySetToZero()&&(this.state.jungle_probability=1,this.forceUpdate())}onSwampsProbability(a){this.state.swamps_probability=a.target.value;this.preventAllBiomesProbabilitySetToZero()&&(this.state.swamps_probability=1,this.forceUpdate())}onTundraProbability(a){this.state.tundra_probability=a.target.value;this.preventAllBiomesProbabilitySetToZero()&&(this.state.tundra_probability=1,this.forceUpdate())}onMinimumNumberOfSettlements(a){this.state.maximum_number_of_settlements<
-parseInt(a.target.value)&&(this.state.maximum_number_of_settlements=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_settlements=a.target.value}onMaximumNumberOfSettlements(a){this.state.maximum_number_of_settlements=this.preventLower(this.state.minimum_number_of_settlements,a.target.value);this.forceUpdate()}onCitiesProbability(a){this.state.cities_probability=a.target.value}onTownsProbability(a){this.state.towns_probability=a.target.value}onVillagesProbability(a){this.state.villages_probability=
-a.target.value}onMinimumNumberOfDwellings(a){this.state.maximum_number_of_dwellings<parseInt(a.target.value)&&(this.state.maximum_number_of_dwellings=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_dwellings=a.target.value}onMaximumNumberOfDwellings(a){this.state.maximum_number_of_dwellings=this.preventLower(this.state.minimum_number_of_dwellings,a.target.value);this.forceUpdate()}onHouseProbability(a){this.state.house_probability=a.target.value}onStrongholdProbability(a){this.state.stronghold_probability=
-a.target.value}onMinimumNumberOfInns(a){this.state.maximum_number_of_inns<parseInt(a.target.value)&&(this.state.maximum_number_of_inns=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_inns=a.target.value}onMaximumNumberOfInns(a){this.state.maximum_number_of_inns=this.preventLower(this.state.minimum_number_of_inns,a.target.value);this.forceUpdate()}onMinimumNumberOfDungeons(a){this.state.maximum_number_of_dungeons<parseInt(a.target.value)&&(this.state.maximum_number_of_dungeons=
-parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_dungeons=a.target.value}onMaximumNumberOfDungeons(a){this.state.maximum_number_of_dungeons=this.preventLower(this.state.minimum_number_of_dungeons,a.target.value);this.forceUpdate()}onTombsProbability(a){this.state.tombs_probability=a.target.value}onTemplesProbability(a){this.state.temples_probability=a.target.value}onCavesProbability(a){this.state.caves_probability=a.target.value}onMinimumNumberOfFactions(a){this.state.maximum_number_of_factions<
-parseInt(a.target.value)&&(this.state.maximum_number_of_factions=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_factions=a.target.value}onMaximumNumberOfFactions(a){this.state.maximum_number_of_factions=this.preventLower(this.state.minimum_number_of_factions,a.target.value);this.forceUpdate()}onCultsProbability(a){this.state.cults_probability=a.target.value}onMilitiasProbability(a){this.state.militias_probability=a.target.value}onSyndicatesProbability(a){this.state.syndicates_probability=
-a.target.value}onWanderingMonstersMaxHD(a){this.state.wandering_monsters_max_hd=a.target.value}onTreasureFactor(a){this.state.treasure_factor=a.target.value}onScrollMod(a){this.state.scroll_mod=a.target.value;this.compile_timeout&&window.clearTimeout(this.compile_timeout);this.compile_timeout=window.setTimeout(()=>{this.setState({compiler:1});fetch("/compile/",{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify({instance:this.props.instance,module_id:this.state.scroll_mod})}).then(b=>
-b.json()).then(b=>{b.okay?this.setState({compiler:2}):this.setState({compiler:-9})}).catch(b=>{console.error("Error:",b)})},1E3)}onSubmit(){this.props.onOkay({RealmTypeKingdom:"RuledRealm",RealmTypeLands:"RuledRealm",RealmTypeDuchy:"RuledRealm",RealmTypeEmpire:"RuledRealm",RealmTypeIsland:"UnruledRealm"}[this.state.realm_type],{realm_type:this.state.realm_type,minimum_number_of_regions:parseInt(this.state.minimum_number_of_regions),maximum_number_of_regions:parseInt(this.state.maximum_number_of_regions),
-mountains_probability:parseInt(this.state.mountains_probability),forest_probability:parseInt(this.state.forest_probability),desert_probability:parseInt(this.state.desert_probability),plains_probability:parseInt(this.state.plains_probability),jungle_probability:parseInt(this.state.jungle_probability),swamps_probability:parseInt(this.state.swamps_probability),tundra_probability:parseInt(this.state.tundra_probability),minimum_tiles_per_mountains_region:parseInt(this.state.minimum_tiles_per_mountains_region),
-maximum_tiles_per_mountains_region:parseInt(this.state.maximum_tiles_per_mountains_region),minimum_tiles_per_forest_region:parseInt(this.state.minimum_tiles_per_forest_region),maximum_tiles_per_forest_region:parseInt(this.state.maximum_tiles_per_forest_region),minimum_tiles_per_desert_region:parseInt(this.state.minimum_tiles_per_desert_region),maximum_tiles_per_desert_region:parseInt(this.state.maximum_tiles_per_desert_region),minimum_tiles_per_plains_region:parseInt(this.state.minimum_tiles_per_plains_region),
-maximum_tiles_per_plains_region:parseInt(this.state.maximum_tiles_per_plains_region),minimum_tiles_per_jungle_region:parseInt(this.state.minimum_tiles_per_jungle_region),maximum_tiles_per_jungle_region:parseInt(this.state.maximum_tiles_per_jungle_region),minimum_tiles_per_swamps_region:parseInt(this.state.minimum_tiles_per_swamps_region),maximum_tiles_per_swamps_region:parseInt(this.state.maximum_tiles_per_swamps_region),minimum_tiles_per_tundra_region:parseInt(this.state.minimum_tiles_per_tundra_region),
-maximum_tiles_per_tundra_region:parseInt(this.state.maximum_tiles_per_tundra_region),minimum_number_of_settlements:parseInt(this.state.minimum_number_of_settlements),maximum_number_of_settlements:parseInt(this.state.maximum_number_of_settlements),cities_probability:parseInt(this.state.cities_probability),towns_probability:parseInt(this.state.towns_probability),villages_probability:parseInt(this.state.villages_probability),minimum_number_of_dwellings:parseInt(this.state.minimum_number_of_dwellings),
-maximum_number_of_dwellings:parseInt(this.state.maximum_number_of_dwellings),house_probability:parseInt(this.state.house_probability),stronghold_probability:parseInt(this.state.stronghold_probability),minimum_number_of_inns:parseInt(this.state.minimum_number_of_inns),maximum_number_of_inns:parseInt(this.state.maximum_number_of_inns),minimum_number_of_dungeons:parseInt(this.state.minimum_number_of_dungeons),maximum_number_of_dungeons:parseInt(this.state.maximum_number_of_dungeons),tombs_probability:parseInt(this.state.tombs_probability),
-temples_probability:parseInt(this.state.temples_probability),caves_probability:parseInt(this.state.caves_probability),minimum_number_of_factions:parseInt(this.state.minimum_number_of_factions),maximum_number_of_factions:parseInt(this.state.maximum_number_of_factions),cults_probability:parseInt(this.state.cults_probability),militias_probability:parseInt(this.state.militias_probability),syndicates_probability:parseInt(this.state.syndicates_probability),wandering_monsters_max_hd:parseInt(this.state.wandering_monsters_max_hd),
-scroll_mod:this.state.scroll_mod,treasure_factor:parseFloat(this.state.treasure_factor)});this.setState({show:!1})}okay(a){this.props.onOkay(a);this.setState({show:!1})}cancel(){$$$module$libs$preact_router_module("/sandbox/"+this.props.instance)}render(a,b){return b.show?html$$module$dialogs` <!-- The Modal -->
+maximum_number_of_dwellings:11,house_probability:1,stronghold_probability:1,minimum_number_of_inns:3,maximum_number_of_inns:6,minimum_number_of_dungeons:6,maximum_number_of_dungeons:9,tombs_probability:1,temples_probability:1,caves_probability:1,prefer_small_dungeons:!1,minimum_number_of_factions:3,maximum_number_of_factions:5,cults_probability:1,militias_probability:1,syndicates_probability:1,wandering_monsters_max_hd:4,scroll_mod:"",treasure_factor:1};this.onSubmit=this.onSubmit.bind(this);this.onRealmType=
+this.onRealmType.bind(this);this.onRealmPopulation=this.onRealmPopulation.bind(this);this.onMinimumNumberOfRegions=this.onMinimumNumberOfRegions.bind(this);this.onMaximumNumberOfRegions=this.onMaximumNumberOfRegions.bind(this);this.onMountainsProbability=this.onMountainsProbability.bind(this);this.onMinimumTilesPerMountainsRegion=this.onMinimumTilesPerMountainsRegion.bind(this);this.onMaximumTilesPerMountainsRegion=this.onMaximumTilesPerMountainsRegion.bind(this);this.onMinimumTilesPerForestRegion=
+this.onMinimumTilesPerForestRegion.bind(this);this.onMaximumTilesPerForestRegion=this.onMaximumTilesPerForestRegion.bind(this);this.onMinimumTilesPerDesertRegion=this.onMinimumTilesPerDesertRegion.bind(this);this.onMaximumTilesPerDesertRegion=this.onMaximumTilesPerDesertRegion.bind(this);this.onMinimumTilesPerPlainsRegion=this.onMinimumTilesPerPlainsRegion.bind(this);this.onMaximumTilesPerPlainsRegion=this.onMaximumTilesPerPlainsRegion.bind(this);this.onMinimumTilesPerJungleRegion=this.onMinimumTilesPerJungleRegion.bind(this);
+this.onMaximumTilesPerJungleRegion=this.onMaximumTilesPerJungleRegion.bind(this);this.onMinimumTilesPerSwampsRegion=this.onMinimumTilesPerSwampsRegion.bind(this);this.onMaximumTilesPerSwampsRegion=this.onMaximumTilesPerSwampsRegion.bind(this);this.onMinimumTilesPerTundraRegion=this.onMinimumTilesPerTundraRegion.bind(this);this.onMaximumTilesPerTundraRegion=this.onMaximumTilesPerTundraRegion.bind(this);this.onForestProbability=this.onForestProbability.bind(this);this.onDesertProbability=this.onDesertProbability.bind(this);
+this.onPlainsProbability=this.onPlainsProbability.bind(this);this.onJungleProbability=this.onJungleProbability.bind(this);this.onSwampsProbability=this.onSwampsProbability.bind(this);this.onTundraProbability=this.onTundraProbability.bind(this);this.onMinimumNumberOfSettlements=this.onMinimumNumberOfSettlements.bind(this);this.onMaximumNumberOfSettlements=this.onMaximumNumberOfSettlements.bind(this);this.onCitiesProbability=this.onCitiesProbability.bind(this);this.onTownsProbability=this.onTownsProbability.bind(this);
+this.onMinimumNumberOfDwellings=this.onMinimumNumberOfDwellings.bind(this);this.onMaximumNumberOfDwellings=this.onMaximumNumberOfDwellings.bind(this);this.onHouseProbability=this.onHouseProbability.bind(this);this.onStrongholdProbability=this.onStrongholdProbability.bind(this);this.onVillagesProbability=this.onVillagesProbability.bind(this);this.onMinimumNumberOfInns=this.onMinimumNumberOfInns.bind(this);this.onMaximumNumberOfInns=this.onMaximumNumberOfInns.bind(this);this.onMinimumNumberOfDungeons=
+this.onMinimumNumberOfDungeons.bind(this);this.onMaximumNumberOfDungeons=this.onMaximumNumberOfDungeons.bind(this);this.onTombsProbability=this.onTombsProbability.bind(this);this.onTemplesProbability=this.onTemplesProbability.bind(this);this.onCavesProbability=this.onCavesProbability.bind(this);this.onPreferSmallDungeons=this.onPreferSmallDungeons.bind(this);this.onMinimumNumberOfFactions=this.onMinimumNumberOfFactions.bind(this);this.onMaximumNumberOfFactions=this.onMaximumNumberOfFactions.bind(this);
+this.onCultsProbability=this.onCultsProbability.bind(this);this.onMilitiasProbability=this.onMilitiasProbability.bind(this);this.onSyndicatesProbability=this.onSyndicatesProbability.bind(this);this.onWanderingMonstersMaxHD=this.onWanderingMonstersMaxHD.bind(this);this.onScrollMod=this.onScrollMod.bind(this);this.onTreasureFactor=this.onTreasureFactor.bind(this)}show(){this.setState({show:!0})}hide(){this.setState({show:!1})}onRealmType(a){"RealmTypeLands"==a.target.value&&this.setState({realm_type:"RealmTypeLands",
+minimum_number_of_regions:6,maximum_number_of_regions:12,mountains_probability:3,forest_probability:0,desert_probability:1,plains_probability:0,jungle_probability:4,swamps_probability:1,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_jungle_region:12,maximum_tiles_per_jungle_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeKingdom"==
+a.target.value&&this.setState({realm_type:"RealmTypeKingdom",minimum_number_of_regions:6,maximum_number_of_regions:12,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,
+maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeEmpire"==a.target.value&&this.setState({realm_type:"RealmTypeEmpire",minimum_number_of_regions:24,maximum_number_of_regions:32,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,
+maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeDuchy"==a.target.value&&this.setState({realm_type:"RealmTypeDuchy",minimum_number_of_regions:4,maximum_number_of_regions:8,mountains_probability:3,forest_probability:5,desert_probability:1,plains_probability:4,jungle_probability:0,swamps_probability:2,
+tundra_probability:0,minimum_tiles_per_mountains_region:12,maximum_tiles_per_mountains_region:32,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:12,maximum_tiles_per_desert_region:32,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,maximum_tiles_per_swamps_region:32});"RealmTypeIsland"==a.target.value&&this.setState({realm_type:"RealmTypeIsland",minimum_number_of_regions:3,maximum_number_of_regions:7,
+mountains_probability:3,forest_probability:0,desert_probability:1,plains_probability:0,jungle_probability:2,swamps_probability:0,tundra_probability:0,minimum_tiles_per_mountains_region:3,maximum_tiles_per_mountains_region:8,minimum_tiles_per_forest_region:12,maximum_tiles_per_forest_region:32,minimum_tiles_per_desert_region:3,maximum_tiles_per_desert_region:8,minimum_tiles_per_jungle_region:3,maximum_tiles_per_jungle_region:8,minimum_tiles_per_plains_region:12,maximum_tiles_per_plains_region:32,minimum_tiles_per_swamps_region:12,
+maximum_tiles_per_swamps_region:32,minimum_number_of_dungeons:1,maximum_number_of_dungeons:3,prefer_small_dungeons:!0,minimum_number_of_settlements:0,maximum_number_of_settlements:1,minimum_number_of_dwellings:2,maximum_number_of_dwellings:5,minimum_number_of_inns:0,maximum_number_of_inns:1,minimum_number_of_factions:0,maximum_number_of_factions:1,cities_probability:1,towns_probability:2,villages_probability:4})}onRealmPopulation(a){"now"==a.target.value&&this.setState({minimum_number_of_settlements:6,
+maximum_number_of_settlements:9,minimum_number_of_dwellings:7,maximum_number_of_dwellings:11,minimum_number_of_inns:6,maximum_number_of_inns:9,minimum_number_of_factions:3,maximum_number_of_factions:5});"later"==a.target.value&&this.setState({minimum_number_of_settlements:0,maximum_number_of_settlements:0,minimum_number_of_dwellings:0,maximum_number_of_dwellings:0,minimum_number_of_inns:0,maximum_number_of_inns:0,minimum_number_of_factions:0,maximum_number_of_factions:0})}preventLower(a,b){return parseInt(a)>
+parseInt(b)?a:b}onMinimumNumberOfRegions(a){this.state.maximum_number_of_regions<parseInt(a.target.value)&&(this.state.maximum_number_of_regions=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_regions=a.target.value}onMaximumNumberOfRegions(a){this.state.maximum_number_of_regions=this.preventLower(this.state.minimum_number_of_regions,a.target.value);this.forceUpdate()}onMountainsProbability(a){this.state.mountains_probability=a.target.value}onMinimumTilesPerMountainsRegion(a){this.state.maximum_tiles_per_mountains_region<
+parseInt(a.target.value)&&(this.state.maximum_tiles_per_mountains_region=parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_mountains_region=a.target.value}onMaximumTilesPerMountainsRegion(a){this.state.maximum_tiles_per_mountains_region=this.preventLower(this.state.minimum_tiles_per_mountains_region,a.target.value);this.forceUpdate()}onMinimumTilesPerForestRegion(a){this.state.maximum_tiles_per_forest_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_forest_region=
+parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_forest_region=a.target.value}onMaximumTilesPerForestRegion(a){this.state.maximum_tiles_per_forest_region=this.preventLower(this.state.minimum_tiles_per_forest_region,a.target.value);this.forceUpdate()}onMinimumTilesPerDesertRegion(a){this.state.maximum_tiles_per_desert_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_desert_region=parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_desert_region=
+a.target.value}onMaximumTilesPerDesertRegion(a){this.state.maximum_tiles_per_desert_region=this.preventLower(this.state.minimum_tiles_per_desert_region,a.target.value);this.forceUpdate()}onMinimumTilesPerPlainsRegion(a){this.state.maximum_tiles_per_plains_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_plains_region=parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_plains_region=a.target.value}onMaximumTilesPerPlainsRegion(a){this.state.maximum_tiles_per_plains_region=
+this.preventLower(this.state.minimum_tiles_per_plains_region,a.target.value);this.forceUpdate()}onMinimumTilesPerJungleRegion(a){this.state.maximum_tiles_per_jungle_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_jungle_region=parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_jungle_region=a.target.value}onMaximumTilesPerJungleRegion(a){this.state.maximum_tiles_per_jungle_region=this.preventLower(this.state.minimum_tiles_per_jungle_region,a.target.value);this.forceUpdate()}onMinimumTilesPerSwampsRegion(a){this.state.maximum_tiles_per_swamps_region<
+parseInt(a.target.value)&&(this.state.maximum_tiles_per_swamps_region=parseInt(a.target.value),this.forceUpdate());this.state.minimum_tiles_per_swamps_region=a.target.value}onMaximumTilesPerSwampsRegion(a){this.state.maximum_tiles_per_swamps_region=this.preventLower(this.state.minimum_tiles_per_swamps_region,a.target.value);this.forceUpdate()}onMinimumTilesPerTundraRegion(a){this.state.maximum_tiles_per_tundra_region<parseInt(a.target.value)&&(this.state.maximum_tiles_per_tundra_region=parseInt(a.target.value),
+this.forceUpdate());this.state.minimum_tiles_per_tundra_region=a.target.value}onMaximumTilesPerTundraRegion(a){this.state.maximum_tiles_per_tundra_region=this.preventLower(this.state.minimum_tiles_per_tundra_region,a.target.value);this.forceUpdate()}preventAllBiomesProbabilitySetToZero(){return 0==parseInt(this.state.mountains_probability)&&0==parseInt(this.state.forest_probability)&&0==parseInt(this.state.desert_probability)&&0==parseInt(this.state.plains_probability)&&0==parseInt(this.state.jungle_probability)&&
+0==parseInt(this.state.swamps_probability)&&0==parseInt(this.state.tundra_probability)?!0:!1}onForestProbability(a){this.state.forest_probability=a.target.value;this.preventAllBiomesProbabilitySetToZero()&&(this.state.forest_probability=1,this.forceUpdate())}onDesertProbability(a){this.state.desert_probability=a.target.value;this.preventAllBiomesProbabilitySetToZero()&&(this.state.desert_probability=1,this.forceUpdate())}onPlainsProbability(a){this.state.plains_probability=a.target.value;this.preventAllBiomesProbabilitySetToZero()&&
+(this.state.plains_probability=1,this.forceUpdate())}onJungleProbability(a){this.state.jungle_probability=a.target.value;this.preventAllBiomesProbabilitySetToZero()&&(this.state.jungle_probability=1,this.forceUpdate())}onSwampsProbability(a){this.state.swamps_probability=a.target.value;this.preventAllBiomesProbabilitySetToZero()&&(this.state.swamps_probability=1,this.forceUpdate())}onTundraProbability(a){this.state.tundra_probability=a.target.value;this.preventAllBiomesProbabilitySetToZero()&&(this.state.tundra_probability=
+1,this.forceUpdate())}onMinimumNumberOfSettlements(a){this.state.maximum_number_of_settlements<parseInt(a.target.value)&&(this.state.maximum_number_of_settlements=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_settlements=a.target.value}onMaximumNumberOfSettlements(a){this.state.maximum_number_of_settlements=this.preventLower(this.state.minimum_number_of_settlements,a.target.value);this.forceUpdate()}onCitiesProbability(a){this.state.cities_probability=a.target.value}onTownsProbability(a){this.state.towns_probability=
+a.target.value}onVillagesProbability(a){this.state.villages_probability=a.target.value}onMinimumNumberOfDwellings(a){this.state.maximum_number_of_dwellings<parseInt(a.target.value)&&(this.state.maximum_number_of_dwellings=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_dwellings=a.target.value}onMaximumNumberOfDwellings(a){this.state.maximum_number_of_dwellings=this.preventLower(this.state.minimum_number_of_dwellings,a.target.value);this.forceUpdate()}onHouseProbability(a){this.state.house_probability=
+a.target.value}onStrongholdProbability(a){this.state.stronghold_probability=a.target.value}onMinimumNumberOfInns(a){this.state.maximum_number_of_inns<parseInt(a.target.value)&&(this.state.maximum_number_of_inns=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_inns=a.target.value}onMaximumNumberOfInns(a){this.state.maximum_number_of_inns=this.preventLower(this.state.minimum_number_of_inns,a.target.value);this.forceUpdate()}onMinimumNumberOfDungeons(a){this.state.maximum_number_of_dungeons<
+parseInt(a.target.value)&&(this.state.maximum_number_of_dungeons=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_dungeons=a.target.value}onMaximumNumberOfDungeons(a){this.state.maximum_number_of_dungeons=this.preventLower(this.state.minimum_number_of_dungeons,a.target.value);this.forceUpdate()}onTombsProbability(a){this.state.tombs_probability=a.target.value}onTemplesProbability(a){this.state.temples_probability=a.target.value}onCavesProbability(a){this.state.caves_probability=
+a.target.value}onPreferSmallDungeons(a){this.state.prefer_small_dungeons=!this.state.prefer_small_dungeons}onMinimumNumberOfFactions(a){this.state.maximum_number_of_factions<parseInt(a.target.value)&&(this.state.maximum_number_of_factions=parseInt(a.target.value),this.forceUpdate());this.state.minimum_number_of_factions=a.target.value}onMaximumNumberOfFactions(a){this.state.maximum_number_of_factions=this.preventLower(this.state.minimum_number_of_factions,a.target.value);this.forceUpdate()}onCultsProbability(a){this.state.cults_probability=
+a.target.value}onMilitiasProbability(a){this.state.militias_probability=a.target.value}onSyndicatesProbability(a){this.state.syndicates_probability=a.target.value}onWanderingMonstersMaxHD(a){this.state.wandering_monsters_max_hd=a.target.value}onTreasureFactor(a){this.state.treasure_factor=a.target.value}onScrollMod(a){this.state.scroll_mod=a.target.value;this.compile_timeout&&window.clearTimeout(this.compile_timeout);this.compile_timeout=window.setTimeout(()=>{this.setState({compiler:1});fetch("/compile/",
+{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify({instance:this.props.instance,module_id:this.state.scroll_mod})}).then(b=>b.json()).then(b=>{b.okay?this.setState({compiler:2}):this.setState({compiler:-9})}).catch(b=>{console.error("Error:",b)})},1E3)}onSubmit(){this.props.onOkay({RealmTypeKingdom:"RuledRealm",RealmTypeLands:"RuledRealm",RealmTypeDuchy:"RuledRealm",RealmTypeEmpire:"RuledRealm",RealmTypeIsland:"UnruledRealm"}[this.state.realm_type],
+{realm_type:this.state.realm_type,minimum_number_of_regions:parseInt(this.state.minimum_number_of_regions),maximum_number_of_regions:parseInt(this.state.maximum_number_of_regions),mountains_probability:parseInt(this.state.mountains_probability),forest_probability:parseInt(this.state.forest_probability),desert_probability:parseInt(this.state.desert_probability),plains_probability:parseInt(this.state.plains_probability),jungle_probability:parseInt(this.state.jungle_probability),swamps_probability:parseInt(this.state.swamps_probability),
+tundra_probability:parseInt(this.state.tundra_probability),minimum_tiles_per_mountains_region:parseInt(this.state.minimum_tiles_per_mountains_region),maximum_tiles_per_mountains_region:parseInt(this.state.maximum_tiles_per_mountains_region),minimum_tiles_per_forest_region:parseInt(this.state.minimum_tiles_per_forest_region),maximum_tiles_per_forest_region:parseInt(this.state.maximum_tiles_per_forest_region),minimum_tiles_per_desert_region:parseInt(this.state.minimum_tiles_per_desert_region),maximum_tiles_per_desert_region:parseInt(this.state.maximum_tiles_per_desert_region),
+minimum_tiles_per_plains_region:parseInt(this.state.minimum_tiles_per_plains_region),maximum_tiles_per_plains_region:parseInt(this.state.maximum_tiles_per_plains_region),minimum_tiles_per_jungle_region:parseInt(this.state.minimum_tiles_per_jungle_region),maximum_tiles_per_jungle_region:parseInt(this.state.maximum_tiles_per_jungle_region),minimum_tiles_per_swamps_region:parseInt(this.state.minimum_tiles_per_swamps_region),maximum_tiles_per_swamps_region:parseInt(this.state.maximum_tiles_per_swamps_region),
+minimum_tiles_per_tundra_region:parseInt(this.state.minimum_tiles_per_tundra_region),maximum_tiles_per_tundra_region:parseInt(this.state.maximum_tiles_per_tundra_region),minimum_number_of_settlements:parseInt(this.state.minimum_number_of_settlements),maximum_number_of_settlements:parseInt(this.state.maximum_number_of_settlements),cities_probability:parseInt(this.state.cities_probability),towns_probability:parseInt(this.state.towns_probability),villages_probability:parseInt(this.state.villages_probability),
+minimum_number_of_dwellings:parseInt(this.state.minimum_number_of_dwellings),maximum_number_of_dwellings:parseInt(this.state.maximum_number_of_dwellings),house_probability:parseInt(this.state.house_probability),stronghold_probability:parseInt(this.state.stronghold_probability),minimum_number_of_inns:parseInt(this.state.minimum_number_of_inns),maximum_number_of_inns:parseInt(this.state.maximum_number_of_inns),minimum_number_of_dungeons:parseInt(this.state.minimum_number_of_dungeons),maximum_number_of_dungeons:parseInt(this.state.maximum_number_of_dungeons),
+tombs_probability:parseInt(this.state.tombs_probability),temples_probability:parseInt(this.state.temples_probability),caves_probability:parseInt(this.state.caves_probability),prefer_small_dungeons:this.state.prefer_small_dungeons,minimum_number_of_factions:parseInt(this.state.minimum_number_of_factions),maximum_number_of_factions:parseInt(this.state.maximum_number_of_factions),cults_probability:parseInt(this.state.cults_probability),militias_probability:parseInt(this.state.militias_probability),syndicates_probability:parseInt(this.state.syndicates_probability),
+wandering_monsters_max_hd:parseInt(this.state.wandering_monsters_max_hd),scroll_mod:this.state.scroll_mod,treasure_factor:parseFloat(this.state.treasure_factor)});this.setState({show:!1})}okay(a){this.props.onOkay(a);this.setState({show:!1})}cancel(){$$$module$libs$preact_router_module("/sandbox/"+this.props.instance)}render(a,b){return b.show?html$$module$dialogs` <!-- The Modal -->
       <div id="realm-generator" class="modal">
         <!-- Modal content -->
         <div class="modal-content modal-content-flex">
@@ -7796,6 +7879,20 @@ scroll_mod:this.state.scroll_mod,treasure_factor:parseFloat(this.state.treasure_
                 name="tombs_probability"
               />
 
+              <h5>Dungeons Size</h5>
+
+              <label for="prefer_small_dungeons" title="Prefer small dungeons">
+                Prefer small dungeons
+              </label>
+              <input
+                style=""
+                type="checkbox"
+                value="${b.prefer_small_dungeons}"
+                onInput="${this.onPreferSmallDungeons}"
+                id="prefer_small_dungeons"
+                name="prefer_small_dungeons"
+              />
+
               <h5>Wandering Monsters</h5>
               <label for="highest_wandering_monster_hitdice_in_dungeons">
                 Wandering monsters highest HD is
@@ -8114,17 +8211,17 @@ scroll_mod:this.state.scroll_mod,treasure_factor:parseFloat(this.state.treasure_
               />
               <span style="font-family:'Oswald'; font-size:75%;"
                 >${0==b.compiler?html$$module$dialogs``:1==b.compiler?html$$module$dialogs`
-                      <span style="color:#222277">
-                        <i class="fa fa-hourglass" /> Compiling
-                      </span>
-                    `:2==b.compiler?html$$module$dialogs`
-                      <span style="color:#227722">
-                        <i class="fa fa-dice" /> This scroll works!
-                      </span>
-                    `:html$$module$dialogs` <span style="color:#772222">
-                      <i class="fa fa-bug" />
-                      This scroll does not work!</span
-                    >`}</span
+                        <span style="color:#222277">
+                          <i class="fa fa-hourglass" /> Compiling
+                        </span>
+                      `:2==b.compiler?html$$module$dialogs`
+                          <span style="color:#227722">
+                            <i class="fa fa-dice" /> This scroll works!
+                          </span>
+                        `:html$$module$dialogs` <span style="color:#772222">
+                          <i class="fa fa-bug" />
+                          This scroll does not work!</span
+                        >`}</span
               >
 
               <h4>Tweaks and Experiments</h4>
@@ -8302,7 +8399,7 @@ this.map.postMapLoaded(()=>{this.map.navigateToRegion(a)}):this.map.postMapLoade
 this.toggleSpinner(0,!0);fetch("/append/",{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify({instance:this.props.instance,entity:this.props.instance,attribute:c,type:a,nx:this.menu?this.menu.nx:d,ny:this.menu?this.menu.ny:e,params:JSON.stringify(b)})}).then(g=>g.json()).then(g=>{this.setState({appending:!1,waiting:this.spinnerState(0,!1)});this.menu=null;this.props.hex_uuid&&this.map.postMapLoaded(()=>{$$$module$libs$preact_router_module("/sandbox/"+
 this.props.instance+"/hex/"+g.uuid,!0)});this.map.getMatrix(!0)}).catch(g=>{console.error("Error:",g)})}appendDialog(a){this.menu=a?a:null;$$$module$libs$preact_router_module("/sandbox/"+this.props.instance+"/append");this.setState({appending:!0,waiting:this.spinnerState(0,!1)})}onReadme(){this.setState({showReadme:!this.state.showReadme})}onHotkeyMode(a,b={}){this.setState({hotkey_mode:a});b.hotkey_mode=a;this.map.setState(b);window.app.hotkey_mode=a}clearHotkeyState(){this.onHotkeyMode(!1);window.app.token_hotkey_mode=
 !1;window.app.flag_hotkey_mode=!1;window.app.kill_hotkey_mode=!1}showTokenChooser(a){this.tokens_callback=a;this.setState({showTokenChooser:!this.state.showTokenChooser});this.clearHotkeyState()}onLock(a){this.setState({map_locked:a})}onExit(){window.api.quit()}closeSnackbar(){this.setState({snackbar:!1})}onPatreon(){window.location.href="/claim/"+this.props.instance}onDownload(){this.setState({packaging:!0,snackbar:!0});fetch("/pack/"+this.props.instance,{method:"GET"}).then(a=>a.json()).then(a=>
-{this.setState({packaging:!1,backpack_link:a.filename,snackbar:!0})}).catch(a=>{this.setState({packaging:!1,backpack_link:null,snackbar:!0});console.error("Error:",a)})}onToggleLabels(a){this.setState({show_labels:this.state.show_labels+1});saveState$$module$state(this.props.instance,"default")}onToggleDice(a){this.setState({show_dice_bar:!this.state.show_dice_bar});saveState$$module$state(this.props.instance,"default")}onTogglePalette(a){this.setState({desaturate_palette:!this.state.desaturate_palette});
+{this.setState({packaging:!1,backpack_link:a.filename,snackbar:!0})}).catch(a=>{this.setState({packaging:!1,backpack_link:null,snackbar:!0});console.error("Error:",a)})}onToggleLabels(a){this.setState({show_labels:12>this.state.show_labels?this.state.show_labels+1:1});saveState$$module$state(this.props.instance,"default")}onToggleDice(a){this.setState({show_dice_bar:!this.state.show_dice_bar});saveState$$module$state(this.props.instance,"default")}onTogglePalette(a){this.setState({desaturate_palette:!this.state.desaturate_palette});
 saveState$$module$state(this.props.instance,"default")}onToggleTheme(a){nextTheme$$module$themes();this.map.map_data.apply_theme_effects();this.forceUpdate();saveState$$module$state(this.props.instance,"default")}onToggleSpoilers(a){this.setState({spoilers_on:!this.state.spoilers_on});saveState$$module$state(this.props.instance,"default")}onVtt(){window.app.vtt_on(this.props.instance);let a=10;const b=window.setInterval(()=>{!this.state.vtt_live&&window.app.provider&&window.app.provider.signalingConns[0].connected?
 (this.setState({show_vtt_message:!0,vtt_live:!this.state.vtt_live}),window.clearInterval(b)):this.state.vtt_live&&!window.app.provider?(this.setState({show_vtt_message:!0,vtt_live:!this.state.vtt_live}),window.clearInterval(b)):0==a--&&window.clearInterval(b)},1E3)}onKeyDown(a){"Escape"===a.key&&"edit"==this.props.mode&&tinymce.activeEditor.hasFocus()&&history.go(-1);if(!window.app.inhibit_hotkeys&&"edit"!=this.props.mode){"Digit2"==a.code&&window.app.rollDice("1d20");"Digit3"==a.code&&window.app.rollDice("1d12");
 "Digit4"==a.code&&window.app.rollDice("1d10");"Digit5"==a.code&&window.app.rollDice("1d8");"Digit6"==a.code&&window.app.rollDice("1d6");"Digit7"==a.code&&window.app.rollDice("1d4");"Digit8"==a.code&&window.app.rollDice("1d7");"Digit0"==a.code&&(window.app.rollDice("1d100"),window.app.rollDice("1d10"));"KeyC"==a.code&&window.app.clearAllDice();if("Backquote"==a.code&&window.app.vtt_referee)return $$$module$libs$preact_router_module("/sandbox/"+this.props.instance+"/search"),a.preventDefault(),a.stopPropagation(),
