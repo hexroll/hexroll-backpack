@@ -18,6 +18,7 @@ jobs:
       - run: MsiExec.exe /i C:\Users\circleci\Downloads\node-v18.17.0-x86.msi /qn
       - run:
           command: |
+            pip install setuptools
             Start-Process powershell -verb runAs -Args "-start GeneralProfile"
             nvm install 16.17.0
             nvm use 16.17.0
@@ -45,11 +46,15 @@ jobs:
 
   build_macos:
     macos:
-      xcode: '13.4.1'
+      xcode: '15.4.0'
     steps:
       - checkout
-      - run: yarn
-      - run: ./node_modules/.bin/electron-builder build --mac
+      - run:
+          command: |
+            nvm install 22.5.1
+            npm install --global yarn
+            yarn
+            ./node_modules/.bin/electron-builder build --mac
       - store_artifacts:
           path: 'dist/darwin'
 

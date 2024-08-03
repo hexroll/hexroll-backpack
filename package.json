@@ -1,6 +1,6 @@
 {
   "name": "hexroll-backpack",
-  "version": "0.9.14",
+  "version": "0.9.15",
   "description": "Hexroll 2E Offline Viewer",
   "author": "Ithai Levi <ithai@pendicepaper.com>",
   "email": "ithai@pendicepaper.com",
@@ -8,9 +8,9 @@
   "license": "AGPL-3.0-only",
   "devDependencies": {
     "dmg-builder": "^24.6.3",
-    "electron": "28.3.0",
+    "electron": "31.3.1",
     "electron-builder": "^24.13.3",
-    "@electron/notarize": "^2.3.0"
+    "@electron/notarize": "^2.3.2"
   },
   "scripts": {
     "start": "electron .",
@@ -23,6 +23,7 @@
     "directories": {
       "output": "dist/${platform}"
     },
+    "buildDependenciesFromSource": true,
     "win": {
       "signingHashAlgorithms": [
         "sha256"
@@ -31,8 +32,13 @@
       "icon": "./assets/icon.ico"
     },
     "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": "universal"
+        }
+      ],
       "hardenedRuntime": true,
-      "gatekeeperAssess": false,
       "entitlements": "build/entitlements.mac.plist",
       "entitlementsInherit": "build/entitlements.mac.plist",
       "executableName": "HexrollBackpack",
@@ -44,22 +50,22 @@
     "afterSign": "notarize.js"
   },
   "dependencies": {
-    "better-sqlite3": "9.4.3"
+    "better-sqlite3": "11.1.2"
   },
   "resolutions": {
     "wrap-ansi": "7.0.0",
     "string-width": "4.2.0",
-    "node-abi": "3.57.0"
+    "node-abi": "3.65.0"
   },
   "overrides": {
     "prebuild-install": {
-      "node-abi": "3.57.0"
+      "node-abi": "3.65.0"
     },
     "prebuild": {
-      "node-abi": "3.57.0"
+      "node-abi": "3.65.0"
     },
     "robotjs": {
-      "node-abi": "3.57.0"
+      "node-abi": "3.65.0"
     }
   }
 }
