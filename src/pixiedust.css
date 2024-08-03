@@ -1048,6 +1048,24 @@ svg#canvas {
   opacity: 0;
 }
 
+#help-button {
+  transition: all 0.4s linear;
+  position: fixed;
+  bottom: 6.6em;
+  z-index: 100;
+  font-size: 1.5em;
+}
+
+#help-button.visible {
+  left: 2em;
+  opacity: 1;
+}
+
+#help-button.hidden {
+  left: -2em;
+  opacity: 0;
+}
+
 #download-button {
   transition: all 0.4s linear;
   position: fixed;
@@ -1365,6 +1383,12 @@ div.small-index {
   height: 100%;
   margin-left: 10%;
   margin-right: 10%;
+  z-index: 0;
+}
+
+/* Added to ensure tinymce modal dialogs are displayed properly */
+#entity-container:has(> #editor-toolbar) {
+  z-index: 2001 !important;
 }
 
 #entity-container.view_hidden {
@@ -1827,9 +1851,6 @@ svg#canvs a.test:hover {
   padding: 0 0.5em;
   border-color: #f2f2f2;
   border-style: solid;
-  /* text-shadow: */
-  /*   -0.5px -0.5px 0.5px #000, */
-  /*   0.5px 0.5px 0.5px #fff; */
   border-width: 1px;
   border-radius: 10px;
   background: -webkit-linear-gradient(top,
@@ -1845,6 +1866,35 @@ svg#canvs a.test:hover {
     2px 1px 4px rgba(68, 68, 68, 0.25),
     -2px 1px 4px rgba(68, 68, 68, 0.25),
     0 9px 16px rgba(68, 68, 68, 0.1);
+}
+
+.help-tables {
+  font-family: 'Oswald';
+  color: #333;
+  font-size: 75%;
+  text-align: left;
+}
+
+.help-tables h4 {
+  margin: 0.2em;
+}
+
+.help-tables .key-button {
+  font-size: 16px !important;
+}
+
+.help-tables td,
+.help-tables th {
+  padding: 0.25em 0em 0.25em 0.25em;
+  border-bottom: 0px solid #f1f1f1;
+}
+
+.help-tables td.help-key {
+  text-align: right;
+}
+
+.help-tables tr:nth-child(even) {
+  background: #f1f1f1;
 }
 
 .hp-mark {
